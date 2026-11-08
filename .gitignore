@@ -1,3 +1,4 @@
 data/raw/
 node_modules/
 preview.html
+scripts/repos.local.json

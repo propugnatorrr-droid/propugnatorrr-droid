@@ -192,7 +192,7 @@ Small pieces extracted from the products above, with the client code left out. E
 
 ## FLIGHT RULES
 
-Real excerpts from the operating rules I give my coding agents. Trimmed for length, not reworded.
+Real excerpts from my engineering operating rules. Trimmed for length, not reworded.
 
 > **Definition of done, per commit.** \`pnpm lint && pnpm typecheck && pnpm test && pnpm build\` passes. No \`any\`, no \`@ts-ignore\`, no \`console.log\`. Zero axe violations on changed pages. Every new interactive element keyboard-reachable with a visible focus ring. No invented facts. No dependency added without a one-line justification in the commit message.
 

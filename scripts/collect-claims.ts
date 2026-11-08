@@ -2,7 +2,7 @@
 // Every number on the profile is read from that file. Run locally (the repos are private):
 //   node scripts/collect-claims.ts
 import { execFileSync } from "node:child_process";
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,31 +10,34 @@ const here = dirname(fileURLToPath(import.meta.url));
 const profile = resolve(here, "..");
 // Folder that contains the private product repos. Set REPOS_ROOT, or keep this repo two levels below it.
 const root = process.env.REPOS_ROOT ?? resolve(profile, "..", "..");
+// Alias to real folder name lives in scripts/repos.local.json, which is git-ignored (see repos.local.example.json).
+const localMapFile = resolve(here, "repos.local.json");
+const repoMap: Record<string, string> = existsSync(localMapFile) ? JSON.parse(readFileSync(localMapFile, "utf8")) : {};
 const gitBash = "C:/Program Files/Git/bin/bash.exe";
 const shell = existsSync(gitBash) ? gitBash : "bash";
 
 type Spec = { id: string; product: string; label: string; cwd: string; command: string };
 const specs: Spec[] = [
-  { id: "citeward.tools", product: "CiteWard", label: "Tools in the in-app directory", cwd: "aescula", command: `grep -cE "^[[:space:]]*[{] label:" app/tools/page.tsx` },
-  { id: "citeward.api_routes", product: "CiteWard", label: "API routes", cwd: "aescula", command: "find app/api -name route.ts | wc -l" },
-  { id: "citeward.commits", product: "CiteWard", label: "Commits", cwd: "aescula", command: "git rev-list --count HEAD" },
+  { id: "citeward.tools", product: "CiteWard", label: "Tools in the in-app directory", cwd: "citeward", command: `grep -cE "^[[:space:]]*[{] label:" app/tools/page.tsx` },
+  { id: "citeward.api_routes", product: "CiteWard", label: "API routes", cwd: "citeward", command: "find app/api -name route.ts | wc -l" },
+  { id: "citeward.commits", product: "CiteWard", label: "Commits", cwd: "citeward", command: "git rev-list --count HEAD" },
   { id: "citeward.tests", product: "CiteWard", label: "Test cases (vitest)", cwd: "@profile", command: `node -e "console.log(require('./data/citeward-tests.json').numTotalTests)"` },
   { id: "citeward.tests_passed", product: "CiteWard", label: "Test cases passing", cwd: "@profile", command: `node -e "console.log(require('./data/citeward-tests.json').numPassedTests)"` },
   { id: "citeward.test_files", product: "CiteWard", label: "Test files", cwd: "@profile", command: `node -e "console.log(require('./data/citeward-tests.json').numTestFiles)"` },
-  { id: "illyria.pages", product: "Illyria", label: "Page routes", cwd: "hotel-demo", command: "find src/app -name page.tsx | wc -l" },
-  { id: "illyria.tables", product: "Illyria", label: "Database tables", cwd: "hotel-demo", command: `grep -rhoE "pgTable[(]" src/db | wc -l` },
-  { id: "illyria.test_cases", product: "Illyria", label: "Test cases", cwd: "hotel-demo", command: `grep -rhoE "await t[(]" scripts/test | wc -l` },
-  { id: "illyria.test_files", product: "Illyria", label: "Test files", cwd: "hotel-demo", command: "ls scripts/test/*.test.ts | wc -l" },
-  { id: "illyria.commits", product: "Illyria", label: "Commits", cwd: "hotel-demo", command: "git rev-list --count HEAD" },
-  { id: "ops.models", product: "TextileWays OS", label: "Data models", cwd: "textileways-ops", command: `grep -c "^model " prisma/schema.prisma` },
-  { id: "ops.models_baseline", product: "TextileWays OS", label: "Data models in the upstream baseline", cwd: "textileways-ops", command: `git show 393ccb4:prisma/schema.prisma | grep -c "^model "` },
-  { id: "hub.models", product: "PrepsNext Hub", label: "Data models", cwd: "prepsnext-athlete-hub", command: `grep -c "^model " prisma/schema.prisma` },
-  { id: "hub.api_routes", product: "PrepsNext Hub", label: "API routes", cwd: "prepsnext-athlete-hub", command: "find src -name route.ts | wc -l" },
-  { id: "hub.pages", product: "PrepsNext Hub", label: "Page routes", cwd: "prepsnext-athlete-hub", command: "find src/app -name page.tsx | wc -l" },
-  { id: "hub.commits", product: "PrepsNext Hub", label: "Commits", cwd: "prepsnext-athlete-hub", command: "git rev-list --count HEAD" },
-  { id: "hub.migrations", product: "PrepsNext Hub", label: "Migrations", cwd: "prepsnext-athlete-hub", command: "ls -d prisma/migrations/*/ | wc -l" },
-  { id: "coach.models", product: "PrepsNext Coach Portal", label: "Data models", cwd: "prepsnext-coach-portal", command: `grep -c "^model " prisma/schema.prisma` },
-  { id: "coach.pages", product: "PrepsNext Coach Portal", label: "Page routes", cwd: "prepsnext-coach-portal", command: "find src/app -name page.tsx | wc -l" },
+  { id: "illyria.pages", product: "Illyria", label: "Page routes", cwd: "illyria", command: "find src/app -name page.tsx | wc -l" },
+  { id: "illyria.tables", product: "Illyria", label: "Database tables", cwd: "illyria", command: `grep -rhoE "pgTable[(]" src/db | wc -l` },
+  { id: "illyria.test_cases", product: "Illyria", label: "Test cases", cwd: "illyria", command: `grep -rhoE "await t[(]" scripts/test | wc -l` },
+  { id: "illyria.test_files", product: "Illyria", label: "Test files", cwd: "illyria", command: "ls scripts/test/*.test.ts | wc -l" },
+  { id: "illyria.commits", product: "Illyria", label: "Commits", cwd: "illyria", command: "git rev-list --count HEAD" },
+  { id: "ops.models", product: "TextileWays OS", label: "Data models", cwd: "textilewaysOs", command: `grep -c "^model " prisma/schema.prisma` },
+  { id: "ops.models_baseline", product: "TextileWays OS", label: "Data models in the upstream baseline", cwd: "textilewaysOs", command: `git show 393ccb4:prisma/schema.prisma | grep -c "^model "` },
+  { id: "hub.models", product: "PrepsNext Hub", label: "Data models", cwd: "hub", command: `grep -c "^model " prisma/schema.prisma` },
+  { id: "hub.api_routes", product: "PrepsNext Hub", label: "API routes", cwd: "hub", command: "find src -name route.ts | wc -l" },
+  { id: "hub.pages", product: "PrepsNext Hub", label: "Page routes", cwd: "hub", command: "find src/app -name page.tsx | wc -l" },
+  { id: "hub.commits", product: "PrepsNext Hub", label: "Commits", cwd: "hub", command: "git rev-list --count HEAD" },
+  { id: "hub.migrations", product: "PrepsNext Hub", label: "Migrations", cwd: "hub", command: "ls -d prisma/migrations/*/ | wc -l" },
+  { id: "coach.models", product: "PrepsNext Coach Portal", label: "Data models", cwd: "coach", command: `grep -c "^model " prisma/schema.prisma` },
+  { id: "coach.pages", product: "PrepsNext Coach Portal", label: "Page routes", cwd: "coach", command: "find src/app -name page.tsx | wc -l" },
   { id: "kynnected.screens", product: "Kynnected", label: "Screens", cwd: "kynnected", command: `find app -name "*.tsx" ! -name "_layout.tsx" | wc -l` },
   { id: "kynnected.migrations", product: "Kynnected", label: "Migrations", cwd: "kynnected", command: "ls supabase/migrations | wc -l" },
   { id: "herbiix.eval_cases", product: "Herbiix", label: "AI evaluation prompts with asserted checks", cwd: "herbiix", command: `grep -E "^[[:space:]]*prompt:" tests/ai/evals.ts | grep -vc "prompt: string"` },
@@ -44,7 +47,7 @@ const specs: Spec[] = [
 
 const claims: Record<string, unknown> = {};
 for (const s of specs) {
-  const cwd = s.cwd === "@profile" ? profile : resolve(root, s.cwd);
+  const cwd = s.cwd === "@profile" ? profile : resolve(root, repoMap[s.cwd] ?? s.cwd);
   const out = execFileSync(shell, ["-c", s.command], { cwd, encoding: "utf8" }).trim();
   const value = Number(out);
   if (!Number.isFinite(value)) throw new Error(`${s.id}: not a number: ${out}`);

@@ -7,7 +7,7 @@
       "label": "Tools in the in-app directory",
       "command": "grep -cE \"^[[:space:]]*[{] label:\" app/tools/page.tsx",
       "cwd": "CiteWard repo (private)",
-      "ranAt": "2026-11-08T05:41:52.305Z"
+      "ranAt": "2026-11-08T05:49:27.027Z"
     },
     "citeward.api_routes": {
       "value": 158,
@@ -15,7 +15,7 @@
       "label": "API routes",
       "command": "find app/api -name route.ts | wc -l",
       "cwd": "CiteWard repo (private)",
-      "ranAt": "2026-11-08T05:41:52.431Z"
+      "ranAt": "2026-11-08T05:49:27.145Z"
     },
     "citeward.commits": {
       "value": 1272,
@@ -23,7 +23,7 @@
       "label": "Commits",
       "command": "git rev-list --count HEAD",
       "cwd": "CiteWard repo (private)",
-      "ranAt": "2026-11-08T05:41:52.516Z"
+      "ranAt": "2026-11-08T05:49:27.230Z"
     },
     "citeward.tests": {
       "value": 322,
@@ -31,7 +31,7 @@
       "label": "Test cases (vitest)",
       "command": "node -e \"console.log(require('./data/citeward-tests.json').numTotalTests)\"",
       "cwd": "this repo",
-      "ranAt": "2026-11-08T05:41:52.627Z"
+      "ranAt": "2026-11-08T05:49:27.342Z"
     },
     "citeward.tests_passed": {
       "value": 318,
@@ -39,7 +39,7 @@
       "label": "Test cases passing",
       "command": "node -e \"console.log(require('./data/citeward-tests.json').numPassedTests)\"",
       "cwd": "this repo",
-      "ranAt": "2026-11-08T05:41:52.749Z"
+      "ranAt": "2026-11-08T05:49:27.450Z"
     },
     "citeward.test_files": {
       "value": 35,
@@ -47,7 +47,7 @@
       "label": "Test files",
       "command": "node -e \"console.log(require('./data/citeward-tests.json').numTestFiles)\"",
       "cwd": "this repo",
-      "ranAt": "2026-11-08T05:41:52.863Z"
+      "ranAt": "2026-11-08T05:49:27.564Z"
     },
     "illyria.pages": {
       "value": 125,
@@ -55,7 +55,7 @@
       "label": "Page routes",
       "command": "find src/app -name page.tsx | wc -l",
       "cwd": "Illyria repo (private)",
-      "ranAt": "2026-11-08T05:41:52.971Z"
+      "ranAt": "2026-11-08T05:49:27.674Z"
     },
     "illyria.tables": {
       "value": 114,
@@ -63,7 +63,7 @@
       "label": "Database tables",
       "command": "grep -rhoE \"pgTable[(]\" src/db | wc -l",
       "cwd": "Illyria repo (private)",
-      "ranAt": "2026-11-08T05:41:53.077Z"
+      "ranAt": "2026-11-08T05:49:27.783Z"
     },
     "illyria.test_cases": {
       "value": 520,
@@ -71,7 +71,7 @@
       "label": "Test cases",
       "command": "grep -rhoE \"await t[(]\" scripts/test | wc -l",
       "cwd": "Illyria repo (private)",
-      "ranAt": "2026-11-08T05:41:53.179Z"
+      "ranAt": "2026-11-08T05:49:27.890Z"
     },
     "illyria.test_files": {
       "value": 56,
@@ -79,7 +79,7 @@
       "label": "Test files",
       "command": "ls scripts/test/*.test.ts | wc -l",
       "cwd": "Illyria repo (private)",
-      "ranAt": "2026-11-08T05:41:53.280Z"
+      "ranAt": "2026-11-08T05:49:27.999Z"
     },
     "illyria.commits": {
       "value": 559,
@@ -87,7 +87,7 @@
       "label": "Commits",
       "command": "git rev-list --count HEAD",
       "cwd": "Illyria repo (private)",
-      "ranAt": "2026-11-08T05:41:53.365Z"
+      "ranAt": "2026-11-08T05:49:28.090Z"
     },
     "ops.models": {
       "value": 105,
@@ -95,7 +95,7 @@
       "label": "Data models",
       "command": "grep -c \"^model \" prisma/schema.prisma",
       "cwd": "TextileWays OS repo (private)",
-      "ranAt": "2026-11-08T05:41:53.424Z"
+      "ranAt": "2026-11-08T05:49:28.155Z"
     },
     "ops.models_baseline": {
       "value": 84,
@@ -103,7 +103,7 @@
       "label": "Data models in the upstream baseline",
       "command": "git show 393ccb4:prisma/schema.prisma | grep -c \"^model \"",
       "cwd": "TextileWays OS repo (private)",
-      "ranAt": "2026-11-08T05:41:53.563Z"
+      "ranAt": "2026-11-08T05:49:28.309Z"
     },
     "hub.models": {
       "value": 23,
@@ -111,7 +111,7 @@
       "label": "Data models",
       "command": "grep -c \"^model \" prisma/schema.prisma",
       "cwd": "PrepsNext Hub repo (private)",
-      "ranAt": "2026-11-08T05:41:53.620Z"
+      "ranAt": "2026-11-08T05:49:28.369Z"
     },
     "hub.api_routes": {
       "value": 18,
@@ -119,7 +119,7 @@
       "label": "API routes",
       "command": "find src -name route.ts | wc -l",
       "cwd": "PrepsNext Hub repo (private)",
-      "ranAt": "2026-11-08T05:41:53.726Z"
+      "ranAt": "2026-11-08T05:49:28.471Z"
     },
     "hub.pages": {
       "value": 64,
@@ -127,7 +127,7 @@
       "label": "Page routes",
       "command": "find src/app -name page.tsx | wc -l",
       "cwd": "PrepsNext Hub repo (private)",
-      "ranAt": "2026-11-08T05:41:53.827Z"
+      "ranAt": "2026-11-08T05:49:28.574Z"
     },
     "hub.commits": {
       "value": 278,
@@ -135,7 +135,7 @@
       "label": "Commits",
       "command": "git rev-list --count HEAD",
       "cwd": "PrepsNext Hub repo (private)",
-      "ranAt": "2026-11-08T05:41:53.916Z"
+      "ranAt": "2026-11-08T05:49:28.662Z"
     },
     "hub.migrations": {
       "value": 22,
@@ -143,7 +143,7 @@
       "label": "Migrations",
       "command": "ls -d prisma/migrations/*/ | wc -l",
       "cwd": "PrepsNext Hub repo (private)",
-      "ranAt": "2026-11-08T05:41:54.013Z"
+      "ranAt": "2026-11-08T05:49:28.772Z"
     },
     "coach.models": {
       "value": 15,
@@ -151,7 +151,7 @@
       "label": "Data models",
       "command": "grep -c \"^model \" prisma/schema.prisma",
       "cwd": "PrepsNext Coach Portal repo (private)",
-      "ranAt": "2026-11-08T05:41:54.072Z"
+      "ranAt": "2026-11-08T05:49:28.829Z"
     },
     "coach.pages": {
       "value": 32,
@@ -159,7 +159,7 @@
       "label": "Page routes",
       "command": "find src/app -name page.tsx | wc -l",
       "cwd": "PrepsNext Coach Portal repo (private)",
-      "ranAt": "2026-11-08T05:41:54.166Z"
+      "ranAt": "2026-11-08T05:49:28.928Z"
     },
     "kynnected.screens": {
       "value": 56,
@@ -167,7 +167,7 @@
       "label": "Screens",
       "command": "find app -name \"*.tsx\" ! -name \"_layout.tsx\" | wc -l",
       "cwd": "Kynnected repo (private)",
-      "ranAt": "2026-11-08T05:41:54.272Z"
+      "ranAt": "2026-11-08T05:49:29.037Z"
     },
     "kynnected.migrations": {
       "value": 24,
@@ -175,7 +175,7 @@
       "label": "Migrations",
       "command": "ls supabase/migrations | wc -l",
       "cwd": "Kynnected repo (private)",
-      "ranAt": "2026-11-08T05:41:54.381Z"
+      "ranAt": "2026-11-08T05:49:29.146Z"
     },
     "herbiix.eval_cases": {
       "value": 25,
@@ -183,7 +183,7 @@
       "label": "AI evaluation prompts with asserted checks",
       "command": "grep -E \"^[[:space:]]*prompt:\" tests/ai/evals.ts | grep -vc \"prompt: string\"",
       "cwd": "Herbiix repo (private)",
-      "ranAt": "2026-11-08T05:41:54.480Z"
+      "ranAt": "2026-11-08T05:49:29.254Z"
     },
     "textileways.redirects": {
       "value": 71,
@@ -191,7 +191,7 @@
       "label": "Permanent redirects for renamed pages",
       "command": "grep -c \"{ from:\" content/configuration/slug-redirects.ts",
       "cwd": "TextileWays repo (private)",
-      "ranAt": "2026-11-08T05:41:54.542Z"
+      "ranAt": "2026-11-08T05:49:29.323Z"
     },
     "novostitches.rfq_required": {
       "value": 4,
@@ -199,7 +199,7 @@
       "label": "Required fields in the quote form",
       "command": "grep -cE \" required\" app/public/wp-content/plugins/novostitches-core/includes/class-rfq-form.php",
       "cwd": "NovoStitches repo (private)",
-      "ranAt": "2026-11-08T05:41:54.604Z"
+      "ranAt": "2026-11-08T05:49:29.383Z"
     }
   }
 }
