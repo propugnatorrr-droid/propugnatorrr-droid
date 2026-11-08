@@ -162,50 +162,7 @@ const goSvg = trace(
   "Animated terminal replay of a real CiteWard trace. Sixty sources retrieved, a long draft, reviewer confidence amber, six of ten cited sources supported. The decision is GO, with the weakness stated.",
 );
 
-// ---------- stack strip (self-hosted icons from data/stack-icons.json, no badge services) ----------
-const iconData = read("data/stack-icons.json").icons as Record<string, { title: string; path: string }>;
-const stackRows: { label: string; chips: { name: string; icon?: string }[] }[] = [
-  { label: "LANGUAGES", chips: [{ name: "TypeScript", icon: "typescript" }, { name: "JavaScript", icon: "javascript" }, { name: "PHP", icon: "php" }, { name: "SQL", icon: "postgresql" }, { name: "HTML", icon: "html5" }, { name: "CSS", icon: "css" }] },
-  { label: "FRAMEWORKS", chips: [{ name: "React", icon: "react" }, { name: "Next.js", icon: "nextdotjs" }, { name: "Node.js", icon: "nodedotjs" }, { name: "React Native (Expo)", icon: "expo" }, { name: "Tailwind CSS", icon: "tailwindcss" }, { name: "WordPress", icon: "wordpress" }] },
-  { label: "DATA AND PAYMENTS", chips: [{ name: "PostgreSQL", icon: "postgresql" }, { name: "Prisma", icon: "prisma" }, { name: "Drizzle", icon: "drizzle" }, { name: "Supabase", icon: "supabase" }, { name: "Neon", icon: "neon" }, { name: "Redis", icon: "redis" }, { name: "Stripe", icon: "stripe" }] },
-  { label: "SHIP AND TEST", chips: [{ name: "Vercel", icon: "vercel" }, { name: "GitHub Actions", icon: "githubactions" }, { name: "Vitest", icon: "vitest" }, { name: "Jest", icon: "jest" }, { name: "Playwright" }] },
-];
-function stack(): string {
-  const W = 1280;
-  const rowH = 52;
-  const left = 222;
-  const rows = stackRows
-    .map((row, r) => {
-      const y = 24 + r * rowH;
-      let x = left;
-      const chips = row.chips
-        .map((c) => {
-          const w = 50 + Math.round(c.name.length * 10);
-          const icon = c.icon
-            ? `<g transform="translate(14,10) scale(0.667)"><path d="${iconData[c.icon].path}" fill="${C.fg}"/></g>`
-            : `<rect x="19" y="15" width="10" height="10" fill="${C.gold}"/>`;
-          const g = `<g transform="translate(${x},${y})"><rect x="0.5" y="0.5" width="${w - 1}" height="38" fill="#0A0A0A" stroke="${C.line}"/>${icon}<text x="44" y="25" font-family="${DISPLAY}" font-size="13" font-weight="700" letter-spacing="1" fill="${C.fg}">${esc(c.name.toUpperCase())}</text></g>`;
-          x += w + 10;
-          return g;
-        })
-        .join("");
-      if (x > W - 16) throw new Error(`stack row "${row.label}" overflows the banner width (${x})`);
-      return `<text x="24" y="${y + 25}" font-family="${DISPLAY}" font-size="11" font-weight="700" letter-spacing="3" fill="${C.gold}">${row.label}</text>${chips}`;
-    })
-    .join("");
-  const H = 24 + stackRows.length * rowH + 4;
-  const names = stackRows.flatMap((r) => r.chips.map((c) => c.name)).join(", ");
-  return guard(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-labelledby="t d">
-<title id="t">Languages and stack</title><desc id="d">${esc(names)}.</desc>
-<rect width="${W}" height="${H}" fill="${C.bg}"/>
-${rows}
-</svg>`,
-    "stack",
-  );
-}
-
-writeFileSync(resolve(profile, "assets/stack.svg"), stack());
+// assets/stack.svg is built by scripts/build-stack.mjs (data/stack.json), not here.
 writeFileSync(resolve(profile, "assets/telemetry.svg"), telemetry());
 writeFileSync(resolve(profile, "assets/trace.svg"), noGoSvg);
 writeFileSync(resolve(profile, "assets/trace-go.svg"), goSvg);
