@@ -38,8 +38,8 @@
       "url": "https://celesya.com",
       "live": true,
       "screen": "celesya",
-      "what": "Personalised conversational AI guide with profile-based readings, chat and decision rooms.",
-      "proof": "Next.js, Vercel AI SDK, Groq"
+      "what": "Personalised AI guide with chat, decision rooms, a journal and forecasts. Crisis messages get a referral, and medical, legal and financial questions are redirected to a professional.",
+      "proof": "{celesya.pages} pages, {celesya.api_routes} API routes"
     },
     {
       "id": "kynnected",
@@ -48,7 +48,7 @@
       "url": null,
       "live": false,
       "screen": "kynnected",
-      "what": "Expo and React Native accountability app with AI mentors. Private demo on request.",
+      "what": "Expo and React Native accountability app with AI mentors.",
       "proof": "{kynnected.screens} screens, {kynnected.migrations} migrations"
     },
     {

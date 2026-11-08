@@ -40,6 +40,8 @@ const specs: Spec[] = [
   { id: "coach.pages", product: "PrepsNext Coach Portal", label: "Page routes", cwd: "coach", command: "find src/app -name page.tsx | wc -l" },
   { id: "kynnected.screens", product: "Kynnected", label: "Screens", cwd: "kynnected", command: `find app -name "*.tsx" ! -name "_layout.tsx" | wc -l` },
   { id: "kynnected.migrations", product: "Kynnected", label: "Migrations", cwd: "kynnected", command: "ls supabase/migrations | wc -l" },
+  { id: "celesya.pages", product: "Celesya", label: "Page routes", cwd: "@profile", command: `gh api "repos/<repo>/git/trees/HEAD?recursive=1" --jq '[.tree[]|select(.path|endswith("/page.tsx"))]|length'` },
+  { id: "celesya.api_routes", product: "Celesya", label: "API routes", cwd: "@profile", command: `gh api "repos/<repo>/git/trees/HEAD?recursive=1" --jq '[.tree[]|select(.path|endswith("/route.ts"))]|length'` },
   { id: "herbiix.eval_cases", product: "Herbiix", label: "AI evaluation prompts with asserted checks", cwd: "herbiix", command: `grep -E "^[[:space:]]*prompt:" tests/ai/evals.ts | grep -vc "prompt: string"` },
   { id: "textileways.redirects", product: "TextileWays", label: "Permanent redirects for renamed pages", cwd: "textileways", command: `grep -c "{ from:" content/configuration/slug-redirects.ts` },
   { id: "novostitches.rfq_required", product: "NovoStitches", label: "Required fields in the quote form", cwd: "novostitches", command: `grep -cE " required" app/public/wp-content/plugins/novostitches-core/includes/class-rfq-form.php` },
@@ -48,7 +50,7 @@ const specs: Spec[] = [
 const claims: Record<string, unknown> = {};
 for (const s of specs) {
   const cwd = s.cwd === "@profile" ? profile : resolve(root, repoMap[s.cwd] ?? s.cwd);
-  const out = execFileSync(shell, ["-c", s.command], { cwd, encoding: "utf8" }).trim();
+  const out = execFileSync(shell, ["-c", s.command.replace("<repo>", repoMap.celesyaGh ?? "")], { cwd, encoding: "utf8" }).trim();
   const value = Number(out);
   if (!Number.isFinite(value)) throw new Error(`${s.id}: not a number: ${out}`);
   claims[s.id] = { value, product: s.product, label: s.label, command: s.command, cwd: s.cwd === "@profile" ? "this repo" : `${s.product} repo (private)`, ranAt: new Date().toISOString() };

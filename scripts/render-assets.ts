@@ -1,5 +1,5 @@
 // Generates assets/telemetry.svg, assets/trace.svg (NO-GO) and assets/trace-go.svg from data/*.json.
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { C, DISPLAY, MONO, esc, fmt, guard } from "./lib/svg.ts";
@@ -163,7 +163,10 @@ const goSvg = trace(
 );
 
 // assets/stack.svg is built by scripts/build-stack.mjs (data/stack.json), not here.
-writeFileSync(resolve(profile, "assets/telemetry.svg"), telemetry());
-writeFileSync(resolve(profile, "assets/trace.svg"), noGoSvg);
-writeFileSync(resolve(profile, "assets/trace-go.svg"), goSvg);
+mkdirSync(resolve(profile, "data/raw/generated"), { recursive: true });
+// assets/telemetry.svg, trace.svg and trace-go.svg are hand-designed now. This script only writes reference copies
+// of the data-driven versions to data/raw/generated/ so it can never overwrite the designed files.
+writeFileSync(resolve(profile, "data/raw/generated/telemetry.svg"), telemetry());
+writeFileSync(resolve(profile, "data/raw/generated/trace.svg"), noGoSvg);
+writeFileSync(resolve(profile, "data/raw/generated/trace-go.svg"), goSvg);
 console.log("wrote telemetry.svg, trace.svg, trace-go.svg");

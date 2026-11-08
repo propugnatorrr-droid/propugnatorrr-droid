@@ -1,5 +1,6 @@
 // Generates README.md from data/claims.json, data/products.json and the two sanitised traces.
 // No number in the README is typed by hand: every figure is a {claim.id} token or read from a JSON file.
+import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -41,7 +42,51 @@ const used = Object.entries(claims)
   .map(([id, c]) => `| ${c.product} | ${c.label} | **${fmt(c.value)}** | \`${c.command.replace(/\|/g, "\\|")}\` |`)
   .join("\n");
 
-const readme = `<p align="center">
+// ---- spotlights: every figure is a claim token, every feature comes from the product itself ----
+const tile = (file: string, alt: string, caption: string) =>
+  `<td width="50%" valign="top"><img src="assets/screens/${file}.webp" alt="${alt}" width="100%"><br><sub>${caption}</sub></td>`;
+
+const illyriaSection = `## SPOTLIGHT: ILLYRIA, A HOTEL OPERATING SYSTEM WITH AN AGENT ON TOP
+
+Illyria is an AI-first hotel and resort platform, multi-tenant and Albanian-first. Property management, master calendar, channel manager, unified inbox, point of sale, invoicing and reports live in one product. [Open the live demo](https://illyria.vercel.app). The hotel in it is fictional, and so is all of its data.
+
+<table>
+<tr>
+${tile("illyria", "Illyria master calendar showing every room night by night with bookings from several channels", "Master calendar: drag a booking to another room, stretch a stay by its edge.")}
+${tile("illyria-inbox", "Illyria unified inbox with guest conversations from WhatsApp, Instagram, Messenger and web chat", "Unified inbox: WhatsApp, Instagram, Messenger and web chat. The AI replies, staff step in any time.")}
+</tr>
+<tr>
+${tile("illyria-assistant", "Illyria hotel agent that takes instructions in plain language", "Hotel agent: ask in plain language. It reads real data and acts with the user's permissions. Risky actions need confirmation.")}
+${tile("illyria-pos", "Illyria point of sale for bar, restaurant and pool", "Bar, restaurant and pool point of sale, billed to the guest's room.")}
+</tr>
+</table>
+
+- **One system for the whole property:** calendar, bookings, arrivals, housekeeping, preventive maintenance, quality audits, lost and found, shift handover and night audit.
+- **Channels:** iCal and Channex adapters for the channel manager, and fiscal invoicing adapters that switch per hotel between mock, sandbox and live.
+- **Reports** for revenue, occupancy and average rate, exportable to Excel or PDF.
+- **Proof:** ${T("illyria.pages")} page routes, ${T("illyria.tables")} database tables, ${T("illyria.test_cases")} test cases, ${T("illyria.commits")} commits.
+- **Double booking is blocked by the database itself.** The story is in [Mission Log 2](#mission-log), and the pattern is public as [no-double-booking-postgres](https://github.com/propugnatorrr-droid/no-double-booking-postgres).
+`;
+
+const celesyaSection = `## SPOTLIGHT: CELESYA, A GUIDE THAT KNOWS ITS LIMITS
+
+Celesya is a personalised AI guide. It gives readings from a name and a date of birth, drawing on traditions such as astrology and numerology, then keeps the conversation going. [Visit celesya.com](https://celesya.com).
+
+<table>
+<tr>
+${tile("celesya", "Celesya landing page with the headline An oracle that learned to read", "Landing page: a name and a date of birth start a reading.")}
+${tile("celesya-mobile", "Celesya on a phone", "The same experience on a phone.")}
+</tr>
+</table>
+
+- **Surfaces:** chat with the guide, an oracle, decision rooms, chambers, dream and shadow work, a journal, letters, forecasts, compatibility and a timeline.
+- **Memory:** a per-user store of what the person has shared. Confirmed memories rank first and rejected ones are dropped.
+- **Typed replies:** structured answers are validated against schemas before they are used.
+- **A safety layer with three levels.** A crisis message gets a referral to help, not a reading. Medical, legal and financial questions are redirected to a professional while the guide stays engaged. It is the same principle as CiteWard: know when not to answer.
+- **Proof:** ${T("celesya.pages")} pages, ${T("celesya.api_routes")} API routes. Built with Next.js and Supabase, with Framer Motion and three.js for the visuals.
+`;
+
+const readmeRaw = `<p align="center">
   <img src="assets/banner.png" alt="PROPUGNATOR. AI engineer, agentic systems and full-stack. Agents that know when not to answer." width="100%">
 </p>
 
@@ -59,7 +104,11 @@ I build AI agents, CRM and ERP systems, and the products around them. Source is 
 
 A GitHub Action requests every product URL every 6 hours. If a site is down, the board says NO-GO.
 
-## NO-GO DEMO: THE AGENT THAT KNOWS WHEN NOT TO ANSWER
+## SPOTLIGHT: CITEWARD, THE AGENT THAT KNOWS WHEN NOT TO ANSWER
+
+<p align="center">
+  <a href="https://citeward.com"><img src="assets/screens/citeward.webp" alt="CiteWard, a medical AI agent. Every claim, cited. It refuses to answer when the evidence is missing." width="100%"></a>
+</p>
 
 Real traces from the live CiteWard pipeline, captured from the pipeline's internal trace output. The questions are synthetic, so no patient data is involved.
 
@@ -210,6 +259,37 @@ Open to remote full-time or contract roles as an **Applied AI Engineer**, **AI A
 
 <sub>Stack icons from <a href="https://simpleicons.org">Simple Icons</a> (CC0), served from this repo. Logos are trademarks of their owners.</sub>
 `;
+
+// ---- order: status, telemetry, all products, then one spotlight per product family ----
+const parts = readmeRaw.split(/\n(?=## )/);
+const intro = parts.shift() as string;
+const take = (title: string): string => {
+  const i = parts.findIndex((x) => x.startsWith(`## ${title}`));
+  if (i < 0) throw new Error(`section not found: ${title}`);
+  return parts.splice(i, 1)[0];
+};
+const ordered = [
+  take("LAUNCH STATUS BOARD"),
+  take("TELEMETRY"),
+  take("MISSIONS FLOWN"),
+  illyriaSection,
+  celesyaSection,
+  take("SPOTLIGHT: CITEWARD"),
+  take("HOW CITEWARD DECIDES"),
+  take("MISSION LOG"),
+  take("OPEN SOURCE"),
+  take("FLIGHT RULES"),
+  take("CONTACT"),
+  ...parts,
+];
+let assembled = [intro, ...ordered.map((x) => x.replace(/\n+$/, "\n"))].join("\n");
+
+// GitHub caches README images for about 5 minutes. A content hash in the URL makes an edited image show at once.
+assembled = assembled.replace(/src="(assets\/[^"?]+)"/g, (_m, path: string) => {
+  const hash = createHash("sha1").update(readFileSync(resolve(profile, path))).digest("hex").slice(0, 8);
+  return `src="${path}?v=${hash}"`;
+});
+const readme = assembled;
 
 if (/[\u2013\u2014]/.test(readme)) throw new Error("README contains an em or en dash");
 writeFileSync(resolve(profile, "README.md"), readme);
