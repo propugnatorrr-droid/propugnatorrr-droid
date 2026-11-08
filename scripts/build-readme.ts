@@ -61,7 +61,7 @@ A GitHub Action requests every product URL every 6 hours. If a site is down, the
 
 ## NO-GO DEMO: THE AGENT THAT KNOWS WHEN NOT TO ANSWER
 
-Real traces from the live CiteWard pipeline, captured with its own \`debug_pipeline\` switch. The questions are synthetic, so no patient data is involved.
+Real traces from the live CiteWard pipeline, captured from the pipeline's internal trace output. The questions are synthetic, so no patient data is involved.
 
 <p align="center">
   <img src="assets/trace.svg" alt="Animated terminal replay of a real CiteWard trace. Twelve sources retrieved, none naming the drug. The decision is NO-GO: dose withheld." width="100%">

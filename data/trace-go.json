@@ -1,9 +1,8 @@
 {
   "capturedAt": "2026-11-08",
   "request": {
-    "endpoint": "POST https://citeward.com/api/oracle",
+    "endpoint": "POST /api/[redacted]",
     "mode": "research",
-    "debug_pipeline": true,
     "query": "What is the evidence that SGLT2 inhibitors reduce heart failure hospitalisation in HFpEF?"
   },
   "stages": {

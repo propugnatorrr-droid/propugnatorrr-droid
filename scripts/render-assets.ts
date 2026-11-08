@@ -126,7 +126,7 @@ const noGoSvg = trace(
   "trace",
   "CITEWARD  /  NO-GO REPLAY",
   [
-    { at: 0.5, segs: [dim("$ "), { t: "POST /api/oracle  mode=clinic  debug_pipeline=true" }] },
+    { at: 0.5, segs: [dim("$ "), { t: "POST /api/[redacted]  mode=clinic" }] },
     { at: 1.5, segs: [gold("QUERY     "), { t: ng.request.query }] },
     { at: 3, segs: [gold("T-0  RETRIEVE   "), { t: `${ng.stages.retrieve.total_retrieved} sources from ${ng.stages.retrieve.providers.join(", ")}` }] },
     { at: 4.5, segs: [dim("     relevance   "), { t: `best ${rel.best}  floor ${rel.floor}  pool_off_target=${rel.poolOffTarget}`, c: C.red }] },
@@ -145,7 +145,7 @@ const goSvg = trace(
   "trace-go",
   "CITEWARD  /  GO REPLAY",
   [
-    { at: 0.5, segs: [dim("$ "), { t: "POST /api/oracle  mode=research  debug_pipeline=true" }] },
+    { at: 0.5, segs: [dim("$ "), { t: "POST /api/[redacted]  mode=research" }] },
     { at: 1.5, segs: [gold("QUERY     "), { t: g.request.query }] },
     { at: 3, segs: [gold("T-0  RETRIEVE   "), { t: `${g.stages.retrieve.total_retrieved} sources from ${g.stages.retrieve.providers.join(", ")}` }] },
     { at: 4.5, segs: [gold("T+1  DRAFT      "), { t: `${fmt(g.stages.draft.chars)} chars, doses in draft: ${g.stages.draft.doses.join(", ")}` }] },

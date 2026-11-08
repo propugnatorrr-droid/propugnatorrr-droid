@@ -31,7 +31,7 @@ function build(file: string, query: string, mode: string, label: "GO" | "NO-GO",
   const firstSentence = String(bottom).replace(/\*/g, "").split(/(?<=[.!?])\s/)[0];
   return noDashes({
     capturedAt: "2026-11-08",
-    request: { endpoint: "POST https://citeward.com/api/oracle", mode, debug_pipeline: true, query },
+    request: { endpoint: "POST /api/[redacted]", mode, query },
     stages: {
       retrieve: {
         providers: providers.split(", "),

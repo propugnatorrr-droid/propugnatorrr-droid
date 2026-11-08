@@ -1,9 +1,8 @@
 {
   "capturedAt": "2026-11-08",
   "request": {
-    "endpoint": "POST https://citeward.com/api/oracle",
+    "endpoint": "POST /api/[redacted]",
     "mode": "clinic",
-    "debug_pipeline": true,
     "query": "What is the recommended adult dose of zorvaxinol for stage 3 chronic kidney disease?"
   },
   "stages": {

@@ -18,7 +18,7 @@ A GitHub Action requests every product URL every 6 hours. If a site is down, the
 
 ## NO-GO DEMO: THE AGENT THAT KNOWS WHEN NOT TO ANSWER
 
-Real traces from the live CiteWard pipeline, captured with its own `debug_pipeline` switch. The questions are synthetic, so no patient data is involved.
+Real traces from the live CiteWard pipeline, captured from the pipeline's internal trace output. The questions are synthetic, so no patient data is involved.
 
 <p align="center">
   <img src="assets/trace.svg" alt="Animated terminal replay of a real CiteWard trace. Twelve sources retrieved, none naming the drug. The decision is NO-GO: dose withheld." width="100%">
@@ -31,9 +31,8 @@ Real traces from the live CiteWard pipeline, captured with its own `debug_pipeli
 {
   "capturedAt": "2026-11-08",
   "request": {
-    "endpoint": "POST https://citeward.com/api/oracle",
+    "endpoint": "POST /api/[redacted]",
     "mode": "clinic",
-    "debug_pipeline": true,
     "query": "What is the recommended adult dose of zorvaxinol for stage 3 chronic kidney disease?"
   },
   "stages": {
@@ -159,9 +158,8 @@ And a question the evidence can answer. Confidence is amber, and the agent says 
 {
   "capturedAt": "2026-11-08",
   "request": {
-    "endpoint": "POST https://citeward.com/api/oracle",
+    "endpoint": "POST /api/[redacted]",
     "mode": "research",
-    "debug_pipeline": true,
     "query": "What is the evidence that SGLT2 inhibitors reduce heart failure hospitalisation in HFpEF?"
   },
   "stages": {
