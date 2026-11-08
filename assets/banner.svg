@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Asad Baig, AI engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#1b2740"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9A25F"/>
+      <stop offset="1" stop-color="#8A6A36"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect x="0" y="0" width="14" height="300" fill="url(#gold)"/>
+  <g fill="none" stroke="#C9A25F" stroke-opacity="0.12">
+    <circle cx="1040" cy="150" r="120"/>
+    <circle cx="1040" cy="150" r="80"/>
+    <circle cx="1040" cy="150" r="40"/>
+  </g>
+  <text x="70" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#F4EFE6" letter-spacing="2">ASAD BAIG</text>
+  <rect x="72" y="150" width="120" height="4" fill="url(#gold)"/>
+  <text x="70" y="198" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#E7C98D">AI engineer · Agentic AI and full-stack</text>
+  <text x="70" y="244" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#B8C2D6">TypeScript · Next.js · PostgreSQL · Karachi (UTC+5) · Remote</text>
+</svg>
