@@ -1,14 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 434" width="1280" height="434" role="img" aria-labelledby="t d">
-<title id="t">CITEWARD  /  NO-GO REPLAY</title><desc id="d">Animated terminal replay of a real CiteWard trace. Retrieval finds 12 sources, none naming the drug. The reviewer grades the refusal green. The decision is NO-GO: dose withheld.</desc>
-<style>.m{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:16px}.l{opacity:0}.k0{animation:k0 24s linear infinite}@keyframes k0{0%,2.08%{opacity:0}2.48%,95%{opacity:1}100%{opacity:0}}.k1{animation:k1 24s linear infinite}@keyframes k1{0%,6.25%{opacity:0}6.65%,95%{opacity:1}100%{opacity:0}}.k2{animation:k2 24s linear infinite}@keyframes k2{0%,12.50%{opacity:0}12.90%,95%{opacity:1}100%{opacity:0}}.k3{animation:k3 24s linear infinite}@keyframes k3{0%,18.75%{opacity:0}19.15%,95%{opacity:1}100%{opacity:0}}.k4{animation:k4 24s linear infinite}@keyframes k4{0%,27.08%{opacity:0}27.48%,95%{opacity:1}100%{opacity:0}}.k5{animation:k5 24s linear infinite}@keyframes k5{0%,35.42%{opacity:0}35.82%,95%{opacity:1}100%{opacity:0}}.k6{animation:k6 24s linear infinite}@keyframes k6{0%,43.75%{opacity:0}44.15%,95%{opacity:1}100%{opacity:0}}.k7{animation:k7 24s linear infinite}@keyframes k7{0%,52.08%{opacity:0}52.48%,95%{opacity:1}100%{opacity:0}}.k8{animation:k8 24s linear infinite}@keyframes k8{0%,60.42%{opacity:0}60.82%,95%{opacity:1}100%{opacity:0}}@media (prefers-reduced-motion:reduce){.l{animation:none!important;opacity:1!important}}</style>
-<rect width="1280" height="434" fill="#000000"/>
-<rect x="8" y="8" width="1264" height="418" fill="none" stroke="#2A2A2A"/>
-<rect x="8" y="8" width="1264" height="44" fill="#0A0A0A"/>
-<rect x="24" y="22" width="14" height="14" fill="#E08C2C"/>
-<text x="52" y="35" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="5" fill="#FFFFFF">CITEWARD  /  NO-GO REPLAY</text>
-<text x="1252" y="35" text-anchor="end" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#8C8C8C">real capture, 2026-11-08</text>
-<text class="m l k0" x="32" y="96" xml:space="preserve"><tspan fill="#8C8C8C">$ </tspan><tspan fill="#FFFFFF">POST /api/[redacted]  mode=clinic</tspan></text><text class="m l k1" x="32" y="124" xml:space="preserve"><tspan fill="#E08C2C" font-weight="700">QUERY     </tspan><tspan fill="#FFFFFF">What is the recommended adult dose of zorvaxinol for stage 3 chronic kidney disease?</tspan></text><text class="m l k2" x="32" y="152" xml:space="preserve"><tspan fill="#E08C2C" font-weight="700">T-0  RETRIEVE   </tspan><tspan fill="#FFFFFF">12 sources from pubmed, umls-expanded</tspan></text><text class="m l k3" x="32" y="180" xml:space="preserve"><tspan fill="#8C8C8C">     relevance   </tspan><tspan fill="#E5484D">best 0.486  floor 0.292  pool_off_target=true</tspan></text><text class="m l k4" x="32" y="208" xml:space="preserve"><tspan fill="#E08C2C" font-weight="700">T+1  DRAFT      </tspan><tspan fill="#FFFFFF">5,763 chars, doses in draft: 0</tspan></text><text class="m l k5" x="32" y="236" xml:space="preserve"><tspan fill="#E08C2C" font-weight="700">T+2  REVIEW     </tspan><tspan fill="#FFFFFF">adversarial critic: confidence green, flags 0, get_human false</tspan></text><text class="m l k6" x="32" y="264" xml:space="preserve"><tspan fill="#E08C2C" font-weight="700">T+3  GRADE      </tspan><tspan fill="#FFFFFF">evidence strength strong, 5 of 5 cited sources passed support check</tspan></text><text class="m l k7" x="32" y="292" xml:space="preserve"><tspan fill="#E08C2C" font-weight="700">T+4  ANSWER     </tspan><tspan fill="#FFFFFF">&quot;There is no established adult dose of zorvaxinol for stage 3 CKD.&quot;</tspan></text>
-<g class="l k8"><rect x="24" y="326" width="1232" height="84" fill="#0A0A0A" stroke="#E5484D" stroke-width="2"/>
-<text x="48" y="364" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="3" fill="#E5484D">NO-GO: DOSE WITHHELD</text>
-<text x="48" y="394" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#FFFFFF">No retrieved source names this drug. The agent refuses to invent a dose.</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 600" width="1280" height="600" role="img" aria-labelledby="t d">
+<title id="t">CiteWard NO-GO replay</title>
+<desc id="d">Animated replay of a real CiteWard trace captured on 2026-11-08. The question asks for the adult dose of zorvaxinol in stage 3 chronic kidney disease. Retrieval finds 12 sources from PubMed and UMLS expansion, none naming the drug, and flags the pool as off target. The draft contains no doses. The adversarial reviewer grades the refusal green. The evidence grade still reads strong, a known calibration gap. The decision is NO-GO: dose withheld.</desc>
+<style>
+.s{font-family:Inter,'Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif}
+.m{font-family:ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.l{opacity:0}
+.k1{animation:k1 24s linear infinite}@keyframes k1{0%,4%{opacity:0}4.6%,95%{opacity:1}100%{opacity:0}}
+.k2{animation:k2 24s linear infinite}@keyframes k2{0%,12%{opacity:0}12.6%,95%{opacity:1}100%{opacity:0}}
+.k3{animation:k3 24s linear infinite}@keyframes k3{0%,24%{opacity:0}24.6%,95%{opacity:1}100%{opacity:0}}
+.k4{animation:k4 24s linear infinite}@keyframes k4{0%,34%{opacity:0}34.6%,95%{opacity:1}100%{opacity:0}}
+.k5{animation:k5 24s linear infinite}@keyframes k5{0%,44%{opacity:0}44.6%,95%{opacity:1}100%{opacity:0}}
+.k6{animation:k6 24s linear infinite}@keyframes k6{0%,52%{opacity:0}52.6%,95%{opacity:1}100%{opacity:0}}
+.k7{animation:k7 24s linear infinite}@keyframes k7{0%,60%{opacity:0}60.6%,95%{opacity:1}100%{opacity:0}}
+.k8{animation:k8 24s linear infinite}@keyframes k8{0%,70%{opacity:0}70.8%,95%{opacity:1}100%{opacity:0}}
+.scan{opacity:0;animation:scan 24s linear infinite}
+@keyframes scan{0%,11%{transform:translateY(220px);opacity:0}13%{opacity:1}58%{transform:translateY(430px);opacity:1}62%,100%{transform:translateY(430px);opacity:0}}
+.glow{animation:glow 2.4s ease-in-out infinite}
+@keyframes glow{0%,100%{stroke-opacity:.05}50%{stroke-opacity:.45}}
+.live{animation:live 1.6s ease-in-out infinite}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.l{animation:none!important;opacity:1!important}.scan{display:none}.glow{animation:none;stroke-opacity:.2}.live{animation:none}}
+</style>
+<defs>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#16243A"/></pattern>
+<linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F6FED" stop-opacity="0"/><stop offset=".5" stop-color="#2F6FED" stop-opacity=".12"/><stop offset="1" stop-color="#2F6FED" stop-opacity="0"/></linearGradient>
+</defs>
+
+<rect width="1280" height="600" fill="#060E1A"/>
+<rect x="16" y="16" width="1248" height="568" rx="20" fill="#0F1B2D" stroke="#1E2D45"/>
+<rect x="16" y="16" width="1248" height="568" rx="20" fill="url(#dots)"/>
+
+<!-- header -->
+<rect x="40" y="32" width="32" height="32" rx="8" fill="#2F6FED"/>
+<path d="M48 48 l6 6 l11 -12" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="s" x="84" y="56" font-size="22" font-weight="700" fill="#FFFFFF">CiteWard</text>
+<rect x="200" y="34" width="196" height="28" rx="14" fill="#132A52" stroke="#2F6FED"/>
+<text class="s" x="214" y="52" font-size="11" font-weight="700" letter-spacing="2" fill="#8DB3FF">MEDGPT · CLINIC MODE</text>
+<rect x="408" y="34" width="128" height="28" rx="14" fill="#2A1620" stroke="#E5484D"/>
+<text class="s" x="421" y="52" font-size="11" font-weight="700" letter-spacing="2" fill="#FF8B8E">NO-GO REPLAY</text>
+<circle class="live" cx="1036" cy="42" r="4" fill="#2FB37A"/>
+<text class="s" x="1240" y="46" text-anchor="end" font-size="12" font-weight="700" letter-spacing="2" fill="#C9D4E5">REAL CAPTURE · 2026-11-08</text>
+<text class="m" x="1240" y="66" text-anchor="end" font-size="12" fill="#6B7C96">POST /api/[redacted]</text>
+<line x1="16" x2="1264" y1="96" y2="96" stroke="#1E2D45"/>
+
+<!-- question -->
+<g class="l k1">
+<text class="s" x="48" y="128" font-size="11" font-weight="700" letter-spacing="3" fill="#2F6FED">QUESTION</text>
+<rect x="40" y="138" width="760" height="44" rx="12" fill="#16243A" stroke="#24395A"/>
+<text class="s" x="60" y="166" font-size="16" fill="#FFFFFF">What is the recommended adult dose of zorvaxinol for stage 3 chronic kidney disease?</text>
+</g>
+
+<!-- pipeline -->
+<text class="s" x="48" y="218" font-size="11" font-weight="700" letter-spacing="3" fill="#2F6FED">EVIDENCE TRACE</text>
+<line x1="60" x2="60" y1="245" y2="447" stroke="#24395A" stroke-width="2"/>
+<rect class="scan" x="40" y="0" width="1200" height="60" fill="url(#sg)"/>
+
+<g class="l k2">
+<circle cx="60" cy="245" r="7" fill="#2F6FED"/>
+<text class="m" x="84" y="250" font-size="13" fill="#6B7C96">T-0</text>
+<text class="s" x="130" y="250" font-size="14" font-weight="700" letter-spacing="2" fill="#FFFFFF">RETRIEVE</text>
+<text class="s" x="270" y="250" font-size="15" fill="#C9D4E5">12 sources from pubmed, umls-expanded</text>
+<rect x="760" y="232" width="102" height="24" rx="12" fill="#16243A" stroke="#2A4166"/>
+<text class="m" x="772" y="249" font-size="13" fill="#C9D4E5">best 0.486</text>
+<rect x="870" y="232" width="110" height="24" rx="12" fill="#16243A" stroke="#2A4166"/>
+<text class="m" x="882" y="249" font-size="13" fill="#C9D4E5">floor 0.292</text>
+<rect x="988" y="232" width="180" height="24" rx="12" fill="#2A1620" stroke="#E5484D"/>
+<text class="m" x="1000" y="249" font-size="13" fill="#FF8B8E">pool_off_target=true</text>
+</g>
+
+<g class="l k3">
+<line x1="60" x2="60" y1="245" y2="291" stroke="#2F6FED" stroke-width="2"/>
+<circle cx="60" cy="291" r="7" fill="#2F6FED"/>
+<text class="m" x="84" y="296" font-size="13" fill="#6B7C96">T+1</text>
+<text class="s" x="130" y="296" font-size="14" font-weight="700" letter-spacing="2" fill="#FFFFFF">DRAFT</text>
+<text class="s" x="270" y="296" font-size="15" fill="#C9D4E5">5,763 characters drafted</text>
+<rect x="760" y="278" width="157" height="24" rx="12" fill="#0F2A22" stroke="#2FB37A"/>
+<text class="m" x="772" y="295" font-size="13" fill="#5FE0A5">doses in draft: 0</text>
+</g>
+
+<g class="l k4">
+<line x1="60" x2="60" y1="291" y2="337" stroke="#2F6FED" stroke-width="2"/>
+<circle cx="60" cy="337" r="7" fill="#2F6FED"/>
+<text class="m" x="84" y="342" font-size="13" fill="#6B7C96">T+2</text>
+<text class="s" x="130" y="342" font-size="14" font-weight="700" letter-spacing="2" fill="#FFFFFF">REVIEW</text>
+<text class="s" x="270" y="342" font-size="15" fill="#C9D4E5">adversarial critic</text>
+<rect x="760" y="324" width="149" height="24" rx="12" fill="#0F2A22" stroke="#2FB37A"/>
+<text class="m" x="772" y="341" font-size="13" fill="#5FE0A5">confidence green</text>
+<rect x="917" y="324" width="79" height="24" rx="12" fill="#16243A" stroke="#2A4166"/>
+<text class="m" x="929" y="341" font-size="13" fill="#C9D4E5">flags 0</text>
+<rect x="1004" y="324" width="141" height="24" rx="12" fill="#16243A" stroke="#2A4166"/>
+<text class="m" x="1016" y="341" font-size="13" fill="#C9D4E5">get_human false</text>
+</g>
+
+<g class="l k5">
+<line x1="60" x2="60" y1="337" y2="383" stroke="#2F6FED" stroke-width="2"/>
+<circle cx="60" cy="383" r="7" fill="#F5A524"/>
+<text class="m" x="84" y="388" font-size="13" fill="#6B7C96">T+3</text>
+<text class="s" x="130" y="388" font-size="14" font-weight="700" letter-spacing="2" fill="#FFFFFF">GRADE</text>
+<text class="s" x="270" y="388" font-size="15" fill="#C9D4E5">evidence strength: strong</text>
+<rect x="760" y="370" width="344" height="24" rx="12" fill="#2A2212" stroke="#F5A524"/>
+<text class="m" x="772" y="387" font-size="13" fill="#F5C46A">5 of 5 cited sources passed support check</text>
+</g>
+
+<g class="l k6">
+<path d="M276 401 l7 12 h-14 z" fill="none" stroke="#F5A524" stroke-width="1.5" stroke-linejoin="round"/>
+<text class="s" x="292" y="413" font-size="12.5" fill="#F5C46A">Known calibration gap: the grade does not yet account for pool_off_target.</text>
+</g>
+
+<g class="l k7">
+<line x1="60" x2="60" y1="383" y2="447" stroke="#2F6FED" stroke-width="2"/>
+<circle cx="60" cy="447" r="7" fill="#2F6FED"/>
+<text class="m" x="84" y="452" font-size="13" fill="#6B7C96">T+4</text>
+<text class="s" x="130" y="452" font-size="14" font-weight="700" letter-spacing="2" fill="#FFFFFF">ANSWER</text>
+<text class="s" x="270" y="452" font-size="16" font-style="italic" fill="#FFFFFF">&#8220;There is no established adult dose of zorvaxinol for stage 3 CKD.&#8221;</text>
+</g>
+
+<!-- verdict -->
+<g class="l k8">
+<rect x="40" y="480" width="1200" height="88" rx="14" fill="#241520" stroke="#E5484D" stroke-width="1.5"/>
+<rect class="glow" x="37" y="477" width="1206" height="94" rx="16" fill="none" stroke="#E5484D" stroke-width="4"/>
+<circle cx="88" cy="524" r="20" fill="none" stroke="#E5484D" stroke-width="3"/>
+<line x1="74" y1="510" x2="102" y2="538" stroke="#E5484D" stroke-width="3" stroke-linecap="round"/>
+<text class="s" x="128" y="519" font-size="26" font-weight="800" letter-spacing="2" fill="#FF5A5F">NO-GO: DOSE WITHHELD</text>
+<text class="s" x="128" y="548" font-size="15" fill="#FFFFFF">No retrieved source names this drug. The agent refuses to invent a dose.</text>
+<text class="m" x="1216" y="524" text-anchor="end" font-size="30" font-weight="700" fill="#FFFFFF">0 / 12</text>
+<text class="s" x="1216" y="550" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2" fill="#9AA8BD">SOURCES NAME THE DRUG</text>
+</g>
 </svg>
