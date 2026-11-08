@@ -1,0 +1,103 @@
+{
+  "note": "Content for the Missions grid and the status board. {claim.id} tokens are replaced from data/claims.json, so no number is typed by hand.",
+  "products": [
+    {
+      "id": "citeward",
+      "name": "CiteWard",
+      "kind": "AI agent",
+      "url": "https://citeward.com",
+      "live": true,
+      "screen": "citeward",
+      "what": "Medical AI agent that cites every claim, grades its own answer and refuses when the evidence is missing.",
+      "proof": "{citeward.tools} tools, {citeward.api_routes} API routes, {citeward.tests} test cases"
+    },
+    {
+      "id": "illyria",
+      "name": "Illyria",
+      "kind": "ERP and AI agent",
+      "url": "https://illyria.vercel.app",
+      "live": true,
+      "screen": "illyria",
+      "what": "Multi-tenant hotel operating system. An AI inbox answers guests across WhatsApp, Instagram, Messenger and web chat.",
+      "proof": "{illyria.tables} database tables, {illyria.test_cases} test cases"
+    },
+    {
+      "id": "herbiix",
+      "name": "Herbiix",
+      "kind": "AI agent",
+      "url": "https://herbiix.com",
+      "live": true,
+      "screen": "herbiix",
+      "what": "Food store with a tool-calling AI kitchen agent that recommends only real recipes and defers on medical questions.",
+      "proof": "{herbiix.eval_cases} asserted AI evaluation checks"
+    },
+    {
+      "id": "celesya",
+      "name": "Celesya",
+      "kind": "AI agent",
+      "url": "https://celesya.com",
+      "live": true,
+      "screen": "celesya",
+      "what": "Personalised conversational AI guide with profile-based readings, chat and decision rooms.",
+      "proof": "Next.js, Vercel AI SDK, Groq"
+    },
+    {
+      "id": "kynnected",
+      "name": "Kynnected",
+      "kind": "AI agent, mobile",
+      "url": null,
+      "live": false,
+      "screen": "kynnected",
+      "what": "Expo and React Native accountability app with AI mentors. Private demo on request.",
+      "proof": "{kynnected.screens} screens, {kynnected.migrations} migrations"
+    },
+    {
+      "id": "coach",
+      "name": "PrepsNext Coach Portal",
+      "kind": "CRM",
+      "url": "https://coaches.prepsnext.com",
+      "live": true,
+      "screen": "coach",
+      "what": "Recruiting CRM for college coaches: watchlists, evaluations and outreach in one dashboard.",
+      "proof": "{coach.pages} pages, {coach.models} data models"
+    },
+    {
+      "id": "hub",
+      "name": "PrepsNext Hub",
+      "kind": "Platform",
+      "url": "https://prepsnext.com/hub",
+      "live": true,
+      "screen": "hub",
+      "what": "Recruiting platform for high school athletes with a promotion auction paid through Stripe.",
+      "proof": "{hub.models} data models, {hub.api_routes} API routes, {hub.commits} commits"
+    },
+    {
+      "id": "textileways",
+      "name": "TextileWays",
+      "kind": "Site and SEO system",
+      "url": "https://www.textileways.com",
+      "live": true,
+      "screen": "textileways",
+      "what": "Manufacturer site with an SEO control system: the build fails on duplicate titles, descriptions or H1s.",
+      "proof": "{textileways.redirects} permanent redirects for renamed pages"
+    },
+    {
+      "id": "novostitches",
+      "name": "NovoStitches",
+      "kind": "Site",
+      "url": "https://novostitches.com",
+      "live": true,
+      "screen": null,
+      "what": "Denim and leather manufacturer site on a custom WordPress theme and plugin.",
+      "proof": "Quote form with {novostitches.rfq_required} required fields"
+    }
+  ],
+  "private": [
+    {
+      "name": "TextileWays OS",
+      "kind": "CRM",
+      "what": "Sales CRM for the manufacturer: signed idempotent website-to-CRM ingestion, round-robin lead assignment and a 24 hour follow-up SLA task. Built on an MIT-licensed upstream.",
+      "proof": "{ops.models} data models, extended from {ops.models_baseline}"
+    }
+  ]
+}

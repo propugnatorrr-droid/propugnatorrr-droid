@@ -1,0 +1,205 @@
+{
+  "generatedBy": "scripts/collect-claims.ts",
+  "claims": {
+    "citeward.tools": {
+      "value": 32,
+      "product": "CiteWard",
+      "label": "Tools in the in-app directory",
+      "command": "grep -cE \"^[[:space:]]*[{] label:\" app/tools/page.tsx",
+      "cwd": "aescula",
+      "ranAt": "2026-11-08T05:26:59.394Z"
+    },
+    "citeward.api_routes": {
+      "value": 158,
+      "product": "CiteWard",
+      "label": "API routes",
+      "command": "find app/api -name route.ts | wc -l",
+      "cwd": "aescula",
+      "ranAt": "2026-11-08T05:26:59.520Z"
+    },
+    "citeward.commits": {
+      "value": 1272,
+      "product": "CiteWard",
+      "label": "Commits",
+      "command": "git rev-list --count HEAD",
+      "cwd": "aescula",
+      "ranAt": "2026-11-08T05:26:59.627Z"
+    },
+    "citeward.tests": {
+      "value": 322,
+      "product": "CiteWard",
+      "label": "Test cases (vitest)",
+      "command": "node -e \"console.log(require('./data/citeward-tests.json').numTotalTests)\"",
+      "cwd": "this repo",
+      "ranAt": "2026-11-08T05:26:59.748Z"
+    },
+    "citeward.tests_passed": {
+      "value": 318,
+      "product": "CiteWard",
+      "label": "Test cases passing",
+      "command": "node -e \"console.log(require('./data/citeward-tests.json').numPassedTests)\"",
+      "cwd": "this repo",
+      "ranAt": "2026-11-08T05:26:59.864Z"
+    },
+    "citeward.test_files": {
+      "value": 35,
+      "product": "CiteWard",
+      "label": "Test files",
+      "command": "node -e \"console.log(require('./data/citeward-tests.json').numTestFiles)\"",
+      "cwd": "this repo",
+      "ranAt": "2026-11-08T05:26:59.975Z"
+    },
+    "illyria.pages": {
+      "value": 125,
+      "product": "Illyria",
+      "label": "Page routes",
+      "command": "find src/app -name page.tsx | wc -l",
+      "cwd": "hotel-demo",
+      "ranAt": "2026-11-08T05:27:00.106Z"
+    },
+    "illyria.tables": {
+      "value": 114,
+      "product": "Illyria",
+      "label": "Database tables",
+      "command": "grep -rhoE \"pgTable[(]\" src/db | wc -l",
+      "cwd": "hotel-demo",
+      "ranAt": "2026-11-08T05:27:00.218Z"
+    },
+    "illyria.test_cases": {
+      "value": 520,
+      "product": "Illyria",
+      "label": "Test cases",
+      "command": "grep -rhoE \"await t[(]\" scripts/test | wc -l",
+      "cwd": "hotel-demo",
+      "ranAt": "2026-11-08T05:27:00.340Z"
+    },
+    "illyria.test_files": {
+      "value": 56,
+      "product": "Illyria",
+      "label": "Test files",
+      "command": "ls scripts/test/*.test.ts | wc -l",
+      "cwd": "hotel-demo",
+      "ranAt": "2026-11-08T05:27:00.446Z"
+    },
+    "illyria.commits": {
+      "value": 559,
+      "product": "Illyria",
+      "label": "Commits",
+      "command": "git rev-list --count HEAD",
+      "cwd": "hotel-demo",
+      "ranAt": "2026-11-08T05:27:00.540Z"
+    },
+    "ops.models": {
+      "value": 105,
+      "product": "TextileWays OS",
+      "label": "Data models",
+      "command": "grep -c \"^model \" prisma/schema.prisma",
+      "cwd": "textileways-ops",
+      "ranAt": "2026-11-08T05:27:00.638Z"
+    },
+    "ops.models_baseline": {
+      "value": 84,
+      "product": "TextileWays OS",
+      "label": "Data models in the upstream baseline",
+      "command": "git show 393ccb4:prisma/schema.prisma | grep -c \"^model \"",
+      "cwd": "textileways-ops",
+      "ranAt": "2026-11-08T05:27:00.798Z"
+    },
+    "hub.models": {
+      "value": 23,
+      "product": "PrepsNext Hub",
+      "label": "Data models",
+      "command": "grep -c \"^model \" prisma/schema.prisma",
+      "cwd": "prepsnext-athlete-hub",
+      "ranAt": "2026-11-08T05:27:00.864Z"
+    },
+    "hub.api_routes": {
+      "value": 18,
+      "product": "PrepsNext Hub",
+      "label": "API routes",
+      "command": "find src -name route.ts | wc -l",
+      "cwd": "prepsnext-athlete-hub",
+      "ranAt": "2026-11-08T05:27:00.979Z"
+    },
+    "hub.pages": {
+      "value": 64,
+      "product": "PrepsNext Hub",
+      "label": "Page routes",
+      "command": "find src/app -name page.tsx | wc -l",
+      "cwd": "prepsnext-athlete-hub",
+      "ranAt": "2026-11-08T05:27:01.081Z"
+    },
+    "hub.commits": {
+      "value": 278,
+      "product": "PrepsNext Hub",
+      "label": "Commits",
+      "command": "git rev-list --count HEAD",
+      "cwd": "prepsnext-athlete-hub",
+      "ranAt": "2026-11-08T05:27:01.182Z"
+    },
+    "hub.migrations": {
+      "value": 22,
+      "product": "PrepsNext Hub",
+      "label": "Migrations",
+      "command": "ls -d prisma/migrations/*/ | wc -l",
+      "cwd": "prepsnext-athlete-hub",
+      "ranAt": "2026-11-08T05:27:01.291Z"
+    },
+    "coach.models": {
+      "value": 15,
+      "product": "PrepsNext Coach Portal",
+      "label": "Data models",
+      "command": "grep -c \"^model \" prisma/schema.prisma",
+      "cwd": "prepsnext-coach-portal",
+      "ranAt": "2026-11-08T05:27:01.351Z"
+    },
+    "coach.pages": {
+      "value": 32,
+      "product": "PrepsNext Coach Portal",
+      "label": "Page routes",
+      "command": "find src/app -name page.tsx | wc -l",
+      "cwd": "prepsnext-coach-portal",
+      "ranAt": "2026-11-08T05:27:01.464Z"
+    },
+    "kynnected.screens": {
+      "value": 56,
+      "product": "Kynnected",
+      "label": "Screens",
+      "command": "find app -name \"*.tsx\" ! -name \"_layout.tsx\" | wc -l",
+      "cwd": "kynnected",
+      "ranAt": "2026-11-08T05:27:01.574Z"
+    },
+    "kynnected.migrations": {
+      "value": 24,
+      "product": "Kynnected",
+      "label": "Migrations",
+      "command": "ls supabase/migrations | wc -l",
+      "cwd": "kynnected",
+      "ranAt": "2026-11-08T05:27:01.680Z"
+    },
+    "herbiix.eval_cases": {
+      "value": 25,
+      "product": "Herbiix",
+      "label": "AI evaluation prompts with asserted checks",
+      "command": "grep -E \"^[[:space:]]*prompt:\" tests/ai/evals.ts | grep -vc \"prompt: string\"",
+      "cwd": "herbiix",
+      "ranAt": "2026-11-08T05:27:01.786Z"
+    },
+    "textileways.redirects": {
+      "value": 71,
+      "product": "TextileWays",
+      "label": "Permanent redirects for renamed pages",
+      "command": "grep -c \"{ from:\" content/configuration/slug-redirects.ts",
+      "cwd": "textileways",
+      "ranAt": "2026-11-08T05:27:01.851Z"
+    },
+    "novostitches.rfq_required": {
+      "value": 4,
+      "product": "NovoStitches",
+      "label": "Required fields in the quote form",
+      "command": "grep -cE \" required\" app/public/wp-content/plugins/novostitches-core/includes/class-rfq-form.php",
+      "cwd": "novostitches",
+      "ranAt": "2026-11-08T05:27:01.923Z"
+    }
+  }
+}

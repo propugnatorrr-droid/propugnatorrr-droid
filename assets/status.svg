@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 550" width="1280" height="550" role="img" aria-labelledby="t d">
+<title id="t">Launch status board</title><desc id="d">8 of 8 products responding at 2026-11-08 04:44 UTC. CiteWard GO, Illyria GO, Herbiix GO, Celesya GO, PrepsNext Coach Portal GO, PrepsNext Hub GO, TextileWays GO, NovoStitches GO.</desc>
+<rect width="1280" height="550" fill="#000000"/>
+<text x="24" y="42" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="6" fill="#E08C2C">LAUNCH STATUS BOARD</text>
+<text x="1256" y="42" text-anchor="end" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="14" fill="#FFFFFF">8 OF 8 GO  |  last checked 2026-11-08 04:44 UTC</text>
+<text x="32" y="98" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="4" fill="#8C8C8C">PRODUCT</text>
+<text x="470" y="98" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="4" fill="#8C8C8C">STATUS</text>
+<text x="640" y="98" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="4" fill="#8C8C8C">RESPONSE</text>
+<text x="800" y="98" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="4" fill="#8C8C8C">ENDPOINT</text>
+<g transform="translate(0,120)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">CITEWARD</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">685 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">citeward.com</text></g><g transform="translate(0,170)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">ILLYRIA</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">240 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">illyria.vercel.app</text></g><g transform="translate(0,220)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">HERBIIX</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">223 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">herbiix.com</text></g><g transform="translate(0,270)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">CELESYA</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">235 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">celesya.com</text></g><g transform="translate(0,320)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">PREPSNEXT COACH PORTAL</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">587 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">coaches.prepsnext.com</text></g><g transform="translate(0,370)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">PREPSNEXT HUB</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">751 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">prepsnext.com/hub</text></g><g transform="translate(0,420)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">TEXTILEWAYS</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">241 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">www.textileways.com</text></g><g transform="translate(0,470)">
+<line x1="24" x2="1256" y1="0" y2="0" stroke="#2A2A2A"/>
+<text x="32" y="32" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#FFFFFF">NOVOSTITCHES</text>
+<rect x="470" y="9" width="120" height="30" fill="#E08C2C"/>
+<text x="530" y="31" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#000000">GO</text>
+<text x="640" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="18" fill="#FFFFFF">501 ms</text>
+<text x="800" y="31" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="15" fill="#8C8C8C">novostitches.com</text></g>
+<line x1="24" x2="1256" y1="530" y2="530" stroke="#2A2A2A"/>
+</svg>

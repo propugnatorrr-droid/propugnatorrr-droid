@@ -1,0 +1,7 @@
+{
+  "source": "npx vitest run --reporter=json in the CiteWard repo, 2026-11-08",
+  "numTotalTests": 322,
+  "numPassedTests": 318,
+  "numFailedTests": 4,
+  "numTestFiles": 35
+}

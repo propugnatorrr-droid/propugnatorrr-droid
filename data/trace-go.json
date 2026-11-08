@@ -1,0 +1,99 @@
+{
+  "capturedAt": "2026-11-08",
+  "request": {
+    "endpoint": "POST https://citeward.com/api/oracle",
+    "mode": "research",
+    "debug_pipeline": true,
+    "query": "What is the evidence that SGLT2 inhibitors reduce heart failure hospitalisation in HFpEF?"
+  },
+  "stages": {
+    "retrieve": {
+      "providers": [
+        "pubmed",
+        "europepmc",
+        "openalex",
+        "umls-expanded"
+      ],
+      "total_retrieved": 60,
+      "sources_shown": 18,
+      "top_sources": [
+        {
+          "id": "34449189",
+          "title": "Empagliflozin in Heart Failure with a Preserved Ejection Fraction.",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34449189/"
+        },
+        {
+          "id": "40037646",
+          "title": "Empagliflozin in resistant hypertension and heart failure with preserved ejection fraction: the EMPEROR-Preserved trial.",
+          "year": 2025,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40037646/"
+        },
+        {
+          "id": "37062851",
+          "title": "Cardiac and kidney benefits of empagliflozin in heart failure across the spectrum of kidney function: Insights from the EMPEROR-Preserved trial.",
+          "year": 2023,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37062851/"
+        },
+        {
+          "id": "34731652",
+          "title": "EMPEROR-Preserved: A promise fulfilled.",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34731652/"
+        },
+        {
+          "id": "36216487",
+          "title": "SGLT2 Inhibitors and Heart Failure with Preserved Ejection Fraction.",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36216487/"
+        }
+      ],
+      "relevance": null
+    },
+    "draft": {
+      "chars": 21367,
+      "doses": [
+        "10 mg",
+        "10 mg"
+      ],
+      "initial_violations": 0
+    },
+    "adversarial_review": {
+      "confidence": "amber",
+      "reason": "Citation verification: 4 cited sources did not pass claim-level semantic support checking; semantic citation-support verification was unavailable, so support for 2 cited sources could not be confirmed either way (they are retained, not rejected). Verify the affected claims against the primary sources before relying on them.",
+      "flags": [],
+      "get_human": false
+    },
+    "confidence_grade": {
+      "strength": "limited",
+      "high_quality_count": 4,
+      "total_retrieved": 60,
+      "total_cited": 10,
+      "total_supported": 6,
+      "independent_supported_sources": 6,
+      "note": "4 cited sources did not pass claim-support checking.",
+      "citation_check_method": "semantic"
+    },
+    "claims": {
+      "total": 125,
+      "verified": 12
+    }
+  },
+  "answer": {
+    "title": "In adults with heart failure and preserved ejection fraction (HFpEF), do SGLT2 inhibitors reduce heart failure hospitalisation compared with placebo?",
+    "headline": "The evidence that SGLT2 inhibitors reduce heart failure hospitalisation in HFpEF is strong and comes principally from EMPEROR-Preserved, the first trial to show a favourable outcome effect in this population.",
+    "cited_ids": [
+      "37062851",
+      "38771475",
+      "39453357",
+      "37674356",
+      "37606866",
+      "38558521"
+    ]
+  },
+  "decision": {
+    "label": "GO",
+    "basis": "Answer delivered with citations. Reviewer confidence amber: 4 of 10 cited sources did not pass claim-level support checking.",
+    "note": "Label and basis are written by me from the fields above; the pipeline does not emit a GO/NO-GO string."
+  }
+}

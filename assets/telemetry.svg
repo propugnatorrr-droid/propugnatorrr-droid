@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 410" width="1280" height="410" role="img" aria-labelledby="t d">
+<title id="t">Telemetry</title><desc id="d">Twelve counted figures from the codebases: CiteWard 32 tools, 158 API routes, 1,272 commits, 322 test cases; Illyria 114 tables; TextileWays OS 105 data models.</desc>
+<rect width="1280" height="410" fill="#000000"/>
+<text x="24" y="38" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="6" fill="#E08C2C">TELEMETRY</text>
+<text x="1256" y="38" text-anchor="end" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#8C8C8C">counted from source, see data/claims.json</text>
+<text x="24" y="78" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="4" fill="#FFFFFF">AGENTS AND AI</text>
+<g transform="translate(0,90)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">32</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">AGENT TOOLS</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">CiteWard</text></g><g transform="translate(213.33333333333334,90)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">158</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">API ROUTES</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">CiteWard</text></g><g transform="translate(426.6666666666667,90)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">1,272</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">COMMITS</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">CiteWard</text></g><g transform="translate(640,90)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">322</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">TEST CASES</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">CiteWard, 318 passing</text></g><g transform="translate(853.3333333333334,90)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">25</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">AI EVAL CHECKS</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">Herbiix kitchen agent</text></g><g transform="translate(1066.6666666666667,90)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">24</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">MIGRATIONS</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">Kynnected</text></g>
+<text x="24" y="250" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="4" fill="#FFFFFF">CRM, ERP AND OPERATING SYSTEMS</text>
+<g transform="translate(0,262)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">114</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">DB TABLES</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">Illyria hotel OS</text></g><g transform="translate(213.33333333333334,262)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">125</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">PAGE ROUTES</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">Illyria hotel OS</text></g><g transform="translate(426.6666666666667,262)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">520</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">TEST CASES</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">Illyria hotel OS</text></g><g transform="translate(640,262)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">105</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">DATA MODELS</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">TextileWays OS CRM, from 84</text></g><g transform="translate(853.3333333333334,262)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">23</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">DATA MODELS</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">PrepsNext Hub</text></g><g transform="translate(1066.6666666666667,262)">
+<rect x="10" y="0" width="193.33333333333334" height="132" fill="#0A0A0A" stroke="#2A2A2A"/>
+<rect x="10" y="0" width="193.33333333333334" height="3" fill="#E08C2C"/>
+<text x="106.66666666666667" y="66" text-anchor="middle" font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="50" font-weight="700" fill="#FFFFFF">18</text>
+<text x="106.66666666666667" y="94" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#E08C2C">API ROUTES</text>
+<text x="106.66666666666667" y="116" text-anchor="middle" font-family="'Eurostile','Microgramma','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#8C8C8C">PrepsNext Hub</text></g>
+</svg>
