@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/stack.svg?v=d3bcbaad" alt="Languages and stack: TypeScript, JavaScript, PHP, SQL, HTML, CSS, React, Next.js, Node.js, React Native with Expo, Tailwind CSS, WordPress, PostgreSQL, Prisma, Drizzle, Supabase, Neon, Redis, Stripe, Vercel, GitHub Actions, Vitest, Jest and Playwright." width="100%">
+  <img src="assets/stack.svg?v=55f645b5" alt="Languages and stack: TypeScript, JavaScript, PHP, SQL, HTML, CSS, React, Next.js, Node.js, React Native with Expo, Tailwind CSS, WordPress, PostgreSQL, Prisma, Drizzle, Supabase, Neon, Redis, Stripe, Vercel, GitHub Actions, Vitest, Jest and Playwright." width="100%">
 </p>
 
 I build AI agents, CRM and ERP systems, and the products around them. Source is private for client reasons. Everything below is generated from the code or checked live.
@@ -19,7 +19,7 @@ A GitHub Action requests every product URL every 6 hours. If a site is down, the
 ## TELEMETRY
 
 <p align="center">
-  <img src="assets/telemetry.svg?v=abf5ff37" alt="Twelve counted readouts: CiteWard 32 tools, 158 API routes, 1,272 commits and 322 test cases; Illyria 114 tables and 520 test cases; TextileWays OS 105 data models." width="100%">
+  <img src="assets/telemetry.svg?v=6d26e03d" alt="Twelve counted readouts: CiteWard 32 tools, 158 API routes, 1,272 commits and 322 test cases; Illyria 114 tables and 520 test cases; TextileWays OS 105 data models." width="100%">
 </p>
 
 <details>
@@ -117,7 +117,7 @@ Celesya is a personalised AI guide. It gives readings from a name and a date of 
 Real traces from the live CiteWard pipeline, captured from the pipeline's internal trace output. The questions are synthetic, so no patient data is involved.
 
 <p align="center">
-  <img src="assets/trace.svg?v=a797f0ef" alt="Animated terminal replay of a real CiteWard trace. Twelve sources retrieved, none naming the drug. The decision is NO-GO: dose withheld." width="100%">
+  <img src="assets/trace.svg?v=dc85b325" alt="Animated terminal replay of a real CiteWard trace. Twelve sources retrieved, none naming the drug. The decision is NO-GO: dose withheld." width="100%">
 </p>
 
 <details>
@@ -244,7 +244,7 @@ Real traces from the live CiteWard pipeline, captured from the pipeline's intern
 And a question the evidence can answer. Confidence is amber, and the agent says why.
 
 <p align="center">
-  <img src="assets/trace-go.svg?v=4af29994" alt="Animated terminal replay of a real CiteWard trace. Sixty sources retrieved, reviewer confidence amber, six of ten cited sources supported. The decision is GO." width="100%">
+  <img src="assets/trace-go.svg?v=9dc93dde" alt="Animated terminal replay of a real CiteWard trace. Sixty sources retrieved, reviewer confidence amber, six of ten cited sources supported. The decision is GO." width="100%">
 </p>
 
 <details>
