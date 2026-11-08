@@ -48,7 +48,7 @@ for (const s of specs) {
   const out = execFileSync(shell, ["-c", s.command], { cwd, encoding: "utf8" }).trim();
   const value = Number(out);
   if (!Number.isFinite(value)) throw new Error(`${s.id}: not a number: ${out}`);
-  claims[s.id] = { value, product: s.product, label: s.label, command: s.command, cwd: s.cwd === "@profile" ? "this repo" : s.cwd, ranAt: new Date().toISOString() };
+  claims[s.id] = { value, product: s.product, label: s.label, command: s.command, cwd: s.cwd === "@profile" ? "this repo" : `${s.product} repo (private)`, ranAt: new Date().toISOString() };
   console.log(s.id.padEnd(26), String(value).padStart(6));
 }
 writeFileSync(resolve(profile, "data/claims.json"), JSON.stringify({ generatedBy: "scripts/collect-claims.ts", claims }, null, 2) + "\n");

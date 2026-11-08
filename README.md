@@ -2,7 +2,9 @@
   <img src="assets/banner.png" alt="PROPUGNATOR. AI engineer, agentic systems and full-stack. Agents that know when not to answer." width="100%">
 </p>
 
-**Asad Baig. AI engineer in Karachi (UTC+5), open to remote roles.**
+<p align="center">
+  <img src="assets/stack.svg" alt="Languages and stack: TypeScript, JavaScript, PHP, SQL, HTML, CSS, React, Next.js, Node.js, React Native with Expo, Tailwind CSS, WordPress, PostgreSQL, Prisma, Drizzle, Supabase, Neon, Redis, Stripe, Vercel, GitHub Actions, Vitest, Jest and Playwright." width="100%">
+</p>
 
 I build AI agents, CRM and ERP systems, and the products around them. Source is private for client reasons. Everything below is generated from the code or checked live.
 
@@ -12,7 +14,7 @@ I build AI agents, CRM and ERP systems, and the products around them. Source is 
   <img src="assets/status.svg" alt="Launch status board. Each live product shows GO or NO-GO, response time in milliseconds and the last-checked time in UTC." width="100%">
 </p>
 
-A GitHub Action requests every product URL every 6 hours. If a site is down, the board says NO-GO. The script is [`scripts/check-live.ts`](scripts/check-live.ts).
+A GitHub Action requests every product URL every 6 hours. If a site is down, the board says NO-GO.
 
 ## NO-GO DEMO: THE AGENT THAT KNOWS WHEN NOT TO ANSWER
 
@@ -268,33 +270,33 @@ And a question the evidence can answer. Confidence is amber, and the agent says 
 
 Each figure is produced by a command run against the real repository, written to [`data/claims.json`](data/claims.json) by [`scripts/collect-claims.ts`](scripts/collect-claims.ts), and this README is generated from that file.
 
-| Product | What | Value | Command | Run in |
-| --- | --- | ---: | --- | --- |
-| CiteWard | Tools in the in-app directory | **32** | `grep -cE "^[[:space:]]*[{] label:" app/tools/page.tsx` | `aescula` |
-| CiteWard | API routes | **158** | `find app/api -name route.ts \| wc -l` | `aescula` |
-| CiteWard | Commits | **1,272** | `git rev-list --count HEAD` | `aescula` |
-| CiteWard | Test cases (vitest) | **322** | `node -e "console.log(require('./data/citeward-tests.json').numTotalTests)"` | `this repo` |
-| CiteWard | Test cases passing | **318** | `node -e "console.log(require('./data/citeward-tests.json').numPassedTests)"` | `this repo` |
-| CiteWard | Test files | **35** | `node -e "console.log(require('./data/citeward-tests.json').numTestFiles)"` | `this repo` |
-| Illyria | Page routes | **125** | `find src/app -name page.tsx \| wc -l` | `hotel-demo` |
-| Illyria | Database tables | **114** | `grep -rhoE "pgTable[(]" src/db \| wc -l` | `hotel-demo` |
-| Illyria | Test cases | **520** | `grep -rhoE "await t[(]" scripts/test \| wc -l` | `hotel-demo` |
-| Illyria | Test files | **56** | `ls scripts/test/*.test.ts \| wc -l` | `hotel-demo` |
-| Illyria | Commits | **559** | `git rev-list --count HEAD` | `hotel-demo` |
-| TextileWays OS | Data models | **105** | `grep -c "^model " prisma/schema.prisma` | `textileways-ops` |
-| TextileWays OS | Data models in the upstream baseline | **84** | `git show 393ccb4:prisma/schema.prisma \| grep -c "^model "` | `textileways-ops` |
-| PrepsNext Hub | Data models | **23** | `grep -c "^model " prisma/schema.prisma` | `prepsnext-athlete-hub` |
-| PrepsNext Hub | API routes | **18** | `find src -name route.ts \| wc -l` | `prepsnext-athlete-hub` |
-| PrepsNext Hub | Page routes | **64** | `find src/app -name page.tsx \| wc -l` | `prepsnext-athlete-hub` |
-| PrepsNext Hub | Commits | **278** | `git rev-list --count HEAD` | `prepsnext-athlete-hub` |
-| PrepsNext Hub | Migrations | **22** | `ls -d prisma/migrations/*/ \| wc -l` | `prepsnext-athlete-hub` |
-| PrepsNext Coach Portal | Data models | **15** | `grep -c "^model " prisma/schema.prisma` | `prepsnext-coach-portal` |
-| PrepsNext Coach Portal | Page routes | **32** | `find src/app -name page.tsx \| wc -l` | `prepsnext-coach-portal` |
-| Kynnected | Screens | **56** | `find app -name "*.tsx" ! -name "_layout.tsx" \| wc -l` | `kynnected` |
-| Kynnected | Migrations | **24** | `ls supabase/migrations \| wc -l` | `kynnected` |
-| Herbiix | AI evaluation prompts with asserted checks | **25** | `grep -E "^[[:space:]]*prompt:" tests/ai/evals.ts \| grep -vc "prompt: string"` | `herbiix` |
-| TextileWays | Permanent redirects for renamed pages | **71** | `grep -c "{ from:" content/configuration/slug-redirects.ts` | `textileways` |
-| NovoStitches | Required fields in the quote form | **4** | `grep -cE " required" app/public/wp-content/plugins/novostitches-core/includes/class-rfq-form.php` | `novostitches` |
+| Product | What | Value | Command |
+| --- | --- | ---: | --- |
+| CiteWard | Tools in the in-app directory | **32** | `grep -cE "^[[:space:]]*[{] label:" app/tools/page.tsx` |
+| CiteWard | API routes | **158** | `find app/api -name route.ts \| wc -l` |
+| CiteWard | Commits | **1,272** | `git rev-list --count HEAD` |
+| CiteWard | Test cases (vitest) | **322** | `node -e "console.log(require('./data/citeward-tests.json').numTotalTests)"` |
+| CiteWard | Test cases passing | **318** | `node -e "console.log(require('./data/citeward-tests.json').numPassedTests)"` |
+| CiteWard | Test files | **35** | `node -e "console.log(require('./data/citeward-tests.json').numTestFiles)"` |
+| Illyria | Page routes | **125** | `find src/app -name page.tsx \| wc -l` |
+| Illyria | Database tables | **114** | `grep -rhoE "pgTable[(]" src/db \| wc -l` |
+| Illyria | Test cases | **520** | `grep -rhoE "await t[(]" scripts/test \| wc -l` |
+| Illyria | Test files | **56** | `ls scripts/test/*.test.ts \| wc -l` |
+| Illyria | Commits | **559** | `git rev-list --count HEAD` |
+| TextileWays OS | Data models | **105** | `grep -c "^model " prisma/schema.prisma` |
+| TextileWays OS | Data models in the upstream baseline | **84** | `git show 393ccb4:prisma/schema.prisma \| grep -c "^model "` |
+| PrepsNext Hub | Data models | **23** | `grep -c "^model " prisma/schema.prisma` |
+| PrepsNext Hub | API routes | **18** | `find src -name route.ts \| wc -l` |
+| PrepsNext Hub | Page routes | **64** | `find src/app -name page.tsx \| wc -l` |
+| PrepsNext Hub | Commits | **278** | `git rev-list --count HEAD` |
+| PrepsNext Hub | Migrations | **22** | `ls -d prisma/migrations/*/ \| wc -l` |
+| PrepsNext Coach Portal | Data models | **15** | `grep -c "^model " prisma/schema.prisma` |
+| PrepsNext Coach Portal | Page routes | **32** | `find src/app -name page.tsx \| wc -l` |
+| Kynnected | Screens | **56** | `find app -name "*.tsx" ! -name "_layout.tsx" \| wc -l` |
+| Kynnected | Migrations | **24** | `ls supabase/migrations \| wc -l` |
+| Herbiix | AI evaluation prompts with asserted checks | **25** | `grep -E "^[[:space:]]*prompt:" tests/ai/evals.ts \| grep -vc "prompt: string"` |
+| TextileWays | Permanent redirects for renamed pages | **71** | `grep -c "{ from:" content/configuration/slug-redirects.ts` |
+| NovoStitches | Required fields in the quote form | **4** | `grep -cE " required" app/public/wp-content/plugins/novostitches-core/includes/class-rfq-form.php` |
 
 Test cases are counted, not test files. CiteWard is a vitest run of 35 files. Illyria counts its own `await t(` cases.
 
@@ -308,11 +310,6 @@ Test cases are counted, not test files. CiteWard is a vitest run of 35 files. Il
 <tr><td width="50%" valign="top"><img src="assets/screens/kynnected.webp" alt="Kynnected product screen" width="100%"><br><sub>AI AGENT, MOBILE</sub><br><b>Kynnected</b> (private demo on request)<br>Expo and React Native accountability app with AI mentors. Private demo on request.<br><sub><b>Proof:</b> 56 screens, 24 migrations</sub></td><td width="50%" valign="top"><a href="https://coaches.prepsnext.com"><img src="assets/screens/coach.webp" alt="PrepsNext Coach Portal product screen" width="100%"></a><br><sub>CRM</sub><br><a href="https://coaches.prepsnext.com"><b>PrepsNext Coach Portal</b></a><br>Recruiting CRM for college coaches: watchlists, evaluations and outreach in one dashboard.<br><sub><b>Proof:</b> 32 pages, 15 data models</sub></td></tr>
 <tr><td width="50%" valign="top"><a href="https://prepsnext.com/hub"><img src="assets/screens/hub.webp" alt="PrepsNext Hub product screen" width="100%"></a><br><sub>PLATFORM</sub><br><a href="https://prepsnext.com/hub"><b>PrepsNext Hub</b></a><br>Recruiting platform for high school athletes with a promotion auction paid through Stripe.<br><sub><b>Proof:</b> 23 data models, 18 API routes, 278 commits</sub></td><td width="50%" valign="top"><a href="https://www.textileways.com"><img src="assets/screens/textileways.webp" alt="TextileWays product screen" width="100%"></a><br><sub>SITE AND SEO SYSTEM</sub><br><a href="https://www.textileways.com"><b>TextileWays</b></a><br>Manufacturer site with an SEO control system: the build fails on duplicate titles, descriptions or H1s.<br><sub><b>Proof:</b> 71 permanent redirects for renamed pages</sub></td></tr>
 </table>
-
-Also shipped:
-
-- **[NovoStitches](https://novostitches.com)**, site: Denim and leather manufacturer site on a custom WordPress theme and plugin. Proof: Quote form with 4 required fields.
-- **TextileWays OS**, CRM, private demo on request: Sales CRM for the manufacturer: signed idempotent website-to-CRM ingestion, round-robin lead assignment and a 24 hour follow-up SLA task. Built on an MIT-licensed upstream. Proof: 105 data models, extended from 84.
 
 ## HOW CITEWARD DECIDES
 
@@ -400,12 +397,10 @@ Real excerpts from the operating rules I give my coding agents. Trimmed for leng
 
 > **Prove it by running it.** Prefer proving a fix works by actually running it over asserting it is correct from reading the code.
 
-## STACK
-
-`TypeScript` `Next.js` `Node.js` `React` `React Native (Expo)` `PostgreSQL` `Prisma` `Drizzle` `Supabase` `Redis` `Stripe` `Playwright` `Vitest` `Jest` `WordPress` `Vercel`
-
 ## CONTACT
 
 Open to remote full-time or contract roles as an **Applied AI Engineer**, **AI Agent Engineer** or **Full-Stack AI Engineer**, and to relocation where an employer sponsors a visa.
 
 **Email** asadexcision@gmail.com · **LinkedIn** [linkedin.com/in/propugnator](https://www.linkedin.com/in/propugnator)
+
+<sub>Stack icons from <a href="https://simpleicons.org">Simple Icons</a> (CC0), served from this repo. Logos are trademarks of their owners.</sub>

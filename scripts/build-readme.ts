@@ -38,14 +38,16 @@ const alsoShipped = [
 
 // ---- how every number is counted ----
 const used = Object.entries(claims)
-  .map(([id, c]) => `| ${c.product} | ${c.label} | **${fmt(c.value)}** | \`${c.command.replace(/\|/g, "\\|")}\` | \`${c.cwd}\` |`)
+  .map(([id, c]) => `| ${c.product} | ${c.label} | **${fmt(c.value)}** | \`${c.command.replace(/\|/g, "\\|")}\` |`)
   .join("\n");
 
 const readme = `<p align="center">
   <img src="assets/banner.png" alt="PROPUGNATOR. AI engineer, agentic systems and full-stack. Agents that know when not to answer." width="100%">
 </p>
 
-**Asad Baig. AI engineer in Karachi (UTC+5), open to remote roles.**
+<p align="center">
+  <img src="assets/stack.svg" alt="Languages and stack: TypeScript, JavaScript, PHP, SQL, HTML, CSS, React, Next.js, Node.js, React Native with Expo, Tailwind CSS, WordPress, PostgreSQL, Prisma, Drizzle, Supabase, Neon, Redis, Stripe, Vercel, GitHub Actions, Vitest, Jest and Playwright." width="100%">
+</p>
 
 I build AI agents, CRM and ERP systems, and the products around them. Source is private for client reasons. Everything below is generated from the code or checked live.
 
@@ -55,7 +57,7 @@ I build AI agents, CRM and ERP systems, and the products around them. Source is 
   <img src="assets/status.svg" alt="Launch status board. Each live product shows GO or NO-GO, response time in milliseconds and the last-checked time in UTC." width="100%">
 </p>
 
-A GitHub Action requests every product URL every 6 hours. If a site is down, the board says NO-GO. The script is [\`scripts/check-live.ts\`](scripts/check-live.ts).
+A GitHub Action requests every product URL every 6 hours. If a site is down, the board says NO-GO.
 
 ## NO-GO DEMO: THE AGENT THAT KNOWS WHEN NOT TO ANSWER
 
@@ -100,8 +102,8 @@ ${goJson}
 
 Each figure is produced by a command run against the real repository, written to [\`data/claims.json\`](data/claims.json) by [\`scripts/collect-claims.ts\`](scripts/collect-claims.ts), and this README is generated from that file.
 
-| Product | What | Value | Command | Run in |
-| --- | --- | ---: | --- | --- |
+| Product | What | Value | Command |
+| --- | --- | ---: | --- |
 ${used}
 
 Test cases are counted, not test files. CiteWard is a vitest run of ${T("citeward.test_files")} files. Illyria counts its own \`await t(\` cases.
@@ -113,10 +115,6 @@ Test cases are counted, not test files. CiteWard is a vitest run of ${T("citewar
 <table>
 ${rows.join("\n")}
 </table>
-
-Also shipped:
-
-${alsoShipped}
 
 ## HOW CITEWARD DECIDES
 
@@ -204,15 +202,13 @@ Real excerpts from the operating rules I give my coding agents. Trimmed for leng
 
 > **Prove it by running it.** Prefer proving a fix works by actually running it over asserting it is correct from reading the code.
 
-## STACK
-
-\`TypeScript\` \`Next.js\` \`Node.js\` \`React\` \`React Native (Expo)\` \`PostgreSQL\` \`Prisma\` \`Drizzle\` \`Supabase\` \`Redis\` \`Stripe\` \`Playwright\` \`Vitest\` \`Jest\` \`WordPress\` \`Vercel\`
-
 ## CONTACT
 
 Open to remote full-time or contract roles as an **Applied AI Engineer**, **AI Agent Engineer** or **Full-Stack AI Engineer**, and to relocation where an employer sponsors a visa.
 
 **Email** asadexcision@gmail.com · **LinkedIn** [linkedin.com/in/propugnator](https://www.linkedin.com/in/propugnator)
+
+<sub>Stack icons from <a href="https://simpleicons.org">Simple Icons</a> (CC0), served from this repo. Logos are trademarks of their owners.</sub>
 `;
 
 if (/[\u2013\u2014]/.test(readme)) throw new Error("README contains an em or en dash");
