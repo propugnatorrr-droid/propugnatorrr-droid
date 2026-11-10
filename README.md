@@ -6,7 +6,7 @@
   <img src="assets/stack.svg?v=55f645b5" alt="Languages and stack: TypeScript, JavaScript, PHP, SQL, HTML, CSS, React, Next.js, Node.js, React Native with Expo, Tailwind CSS, WordPress, PostgreSQL, Prisma, Drizzle, Supabase, Neon, Redis, Stripe, Vercel, GitHub Actions, Vitest, Jest and Playwright." width="100%">
 </p>
 
-I build AI agents, CRM and ERP systems, and the products around them. Source is private for client reasons. Everything below is generated from the code or checked live.
+I build AI agents, CRM and ERP systems, applications, websites and the products around them. Source is private for client reasons. Everything below is generated from the code or checked live.
 
 ## LAUNCH STATUS BOARD
 
