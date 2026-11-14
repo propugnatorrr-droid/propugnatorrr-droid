@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780" role="img" aria-labelledby="t d">
 <title id="t">Launch status board</title>
-<desc id="d">8 of 8 products responding at 2026-11-13 05:31 UTC. Median response 864 ms. CiteWard 754 ms, Illyria 1258 ms, PrepsNext Hub 973 ms, PrepsNext Coach Portal 1088 ms, TextileWays 365 ms, NovoStitches 1344 ms, Herbiix 393 ms, Celesya 493 ms. All GO.</desc>
+<desc id="d">8 of 8 products responding at 2026-11-14 13:06 UTC. Median response 673 ms. CiteWard 410 ms, Illyria 1379 ms, PrepsNext Hub 587 ms, PrepsNext Coach Portal 758 ms, TextileWays 316 ms, NovoStitches 1133 ms, Herbiix 232 ms, Celesya 942 ms. All GO.</desc>
 <defs>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#0E0E0E"/></pattern>
   <linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#5A3A12"/><stop offset=".7" stop-color="#E08C2C"/><stop offset="1" stop-color="#FFC46B"/></linearGradient>
@@ -55,10 +55,10 @@
   <text x="48" y="160">MEDIAN RESPONSE</text><text x="356" y="160">FASTEST</text><text x="664" y="160">SLOWEST</text><text x="972" y="160">LAST CHECK</text>
 </g>
 <g class="m" font-size="24" fill="#FFFFFF">
-  <text x="48" y="193">864 ms</text><text x="356" y="193">365 ms</text><text x="664" y="193">1344 ms</text><text x="972" y="193">05:31 UTC</text>
+  <text x="48" y="193">673 ms</text><text x="356" y="193">232 ms</text><text x="664" y="193">1379 ms</text><text x="972" y="193">13:06 UTC</text>
 </g>
 <g class="m" font-size="12" fill="#E08C2C">
-  <text x="460" y="192">TEXTILEWAYS</text><text x="783" y="192">NOVOSTITCHES</text><text x="1124" y="192">2026-11-13</text>
+  <text x="460" y="192">HERBIIX</text><text x="783" y="192">ILLYRIA</text><text x="1124" y="192">2026-11-14</text>
 </g>
 
 <!-- COLUMN HEADERS -->
@@ -80,8 +80,8 @@
 <circle cx="490" cy="28" r="4" fill="#E08C2C" class="ring"/><circle cx="490" cy="28" r="4" fill="#E08C2C"/>
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
-<rect x="640" y="24" width="181" height="8" fill="url(#bar)" class="bar" style="animation-delay:.4s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">754 ms</text>
+<rect x="640" y="24" width="98.4" height="8" fill="url(#bar)" class="bar" style="animation-delay:.4s"/>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">410 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">citeward.com</text>
 </g></g>
 
@@ -94,7 +94,7 @@
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
 <rect x="640" y="24" width="240" height="8" fill="url(#bar)" class="bar" style="animation-delay:.5s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">1258 ms</text>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">1379 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">illyria.vercel.app</text>
 </g></g>
 
@@ -106,8 +106,8 @@
 <circle cx="490" cy="28" r="4" fill="#E08C2C" class="ring" style="animation-delay:.6s"/><circle cx="490" cy="28" r="4" fill="#E08C2C"/>
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
-<rect x="640" y="24" width="233.5" height="8" fill="url(#bar)" class="bar" style="animation-delay:.6s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">973 ms</text>
+<rect x="640" y="24" width="140.9" height="8" fill="url(#bar)" class="bar" style="animation-delay:.6s"/>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">587 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">prepsnext.com/hub</text>
 </g></g>
 
@@ -119,8 +119,8 @@
 <circle cx="490" cy="28" r="4" fill="#E08C2C" class="ring" style="animation-delay:.9s"/><circle cx="490" cy="28" r="4" fill="#E08C2C"/>
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
-<rect x="640" y="24" width="240" height="8" fill="url(#bar)" class="bar" style="animation-delay:.7s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">1088 ms</text>
+<rect x="640" y="24" width="181.9" height="8" fill="url(#bar)" class="bar" style="animation-delay:.7s"/>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">758 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">coaches.prepsnext.com</text>
 </g></g>
 
@@ -132,8 +132,8 @@
 <circle cx="490" cy="28" r="4" fill="#E08C2C" class="ring" style="animation-delay:1.2s"/><circle cx="490" cy="28" r="4" fill="#E08C2C"/>
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
-<rect x="640" y="24" width="87.6" height="8" fill="url(#bar)" class="bar" style="animation-delay:.8s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">365 ms</text>
+<rect x="640" y="24" width="75.8" height="8" fill="url(#bar)" class="bar" style="animation-delay:.8s"/>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">316 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">www.textileways.com</text>
 </g></g>
 
@@ -146,7 +146,7 @@
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
 <rect x="640" y="24" width="240" height="8" fill="url(#bar)" class="bar" style="animation-delay:.9s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">1344 ms</text>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">1133 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">novostitches.com</text>
 </g></g>
 
@@ -158,8 +158,8 @@
 <circle cx="490" cy="28" r="4" fill="#E08C2C" class="ring" style="animation-delay:1.8s"/><circle cx="490" cy="28" r="4" fill="#E08C2C"/>
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
-<rect x="640" y="24" width="94.3" height="8" fill="url(#bar)" class="bar" style="animation-delay:1s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">393 ms</text>
+<rect x="640" y="24" width="55.7" height="8" fill="url(#bar)" class="bar" style="animation-delay:1s"/>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">232 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">herbiix.com</text>
 </g></g>
 
@@ -171,8 +171,8 @@
 <circle cx="490" cy="28" r="4" fill="#E08C2C" class="ring" style="animation-delay:2.1s"/><circle cx="490" cy="28" r="4" fill="#E08C2C"/>
 <text x="544" y="34" text-anchor="middle" class="f" font-size="15" font-weight="700" letter-spacing="4" fill="#E08C2C">GO</text>
 <rect x="640" y="24" width="240" height="8" fill="#151515"/>
-<rect x="640" y="24" width="118.3" height="8" fill="url(#bar)" class="bar" style="animation-delay:1.1s"/>
-<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">493 ms</text>
+<rect x="640" y="24" width="226.1" height="8" fill="url(#bar)" class="bar" style="animation-delay:1.1s"/>
+<text x="900" y="35" class="m" font-size="17" fill="#FFFFFF">942 ms</text>
 <text x="1010" y="35" class="m" font-size="14" fill="#8C8C8C">celesya.com</text>
 </g></g>
 

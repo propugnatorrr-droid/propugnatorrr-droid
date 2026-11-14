@@ -1,60 +1,60 @@
 {
-  "checkedAt": "2026-11-13T05:31:49.058Z",
+  "checkedAt": "2026-11-14T13:06:50.182Z",
   "rows": [
     {
       "name": "CiteWard",
       "url": "https://citeward.com",
       "go": true,
-      "ms": 754,
+      "ms": 410,
       "code": 200
     },
     {
       "name": "Illyria",
       "url": "https://illyria.vercel.app",
       "go": true,
-      "ms": 1258,
+      "ms": 1379,
       "code": 200
     },
     {
       "name": "Herbiix",
       "url": "https://herbiix.com",
       "go": true,
-      "ms": 393,
+      "ms": 232,
       "code": 200
     },
     {
       "name": "Celesya",
       "url": "https://celesya.com",
       "go": true,
-      "ms": 493,
+      "ms": 942,
       "code": 200
     },
     {
       "name": "PrepsNext Coach Portal",
       "url": "https://coaches.prepsnext.com",
       "go": true,
-      "ms": 1088,
+      "ms": 758,
       "code": 200
     },
     {
       "name": "PrepsNext Hub",
       "url": "https://prepsnext.com/hub",
       "go": true,
-      "ms": 973,
+      "ms": 587,
       "code": 200
     },
     {
       "name": "TextileWays",
       "url": "https://www.textileways.com",
       "go": true,
-      "ms": 365,
+      "ms": 316,
       "code": 200
     },
     {
       "name": "NovoStitches",
       "url": "https://novostitches.com",
       "go": true,
-      "ms": 1344,
+      "ms": 1133,
       "code": 200
     }
   ]

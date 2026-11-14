@@ -11,7 +11,7 @@ I build AI agents, CRM and ERP systems, and the products around them. Source is 
 ## LAUNCH STATUS BOARD
 
 <p align="center">
-  <img src="assets/status.svg?v=0f94c343" alt="Launch status board. Each live product shows GO or NO-GO, response time in milliseconds and the last-checked time in UTC." width="100%">
+  <img src="assets/status.svg?v=14cc7ec4" alt="Launch status board. Each live product shows GO or NO-GO, response time in milliseconds and the last-checked time in UTC." width="100%">
 </p>
 
 A GitHub Action requests every product URL every 6 hours. If a site is down, the board says NO-GO.
